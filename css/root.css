@@ -1,0 +1,17 @@
+:root {
+  /* Colors */
+  --dark-primary-color: #455a64;
+  --light-primary-color: #cfd8dc;
+  --primary-color: #607d8b;
+  --accent-color: #03a9f4;
+
+  --primary-text: #212121;
+  --secondary-text: #757575;
+  --text: #ffffff;
+  --divider-color: #bdbdbd;
+
+  --main-gradient: linear-gradient(to bottom, #1cb5e0, #000046);
+
+  /* Fonts */
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}

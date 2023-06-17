@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript 2.0. Unit 01</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="/css/root.css" />
+    <link rel="stylesheet" href="/css/units.css" />
+  </head>
+
+  <body>
+    <h1>Unit 01. Змінні і типи. Числа, рядки, логічні оператори</h1>
+
+    <section>
+      <h4>Task 1</h4>
+      <p>Виведіть у консоль ваше ім'я. Нагадування – під час роботи, консоль відкрита завжди!</p>
+    </section>
+
+    <section>
+      <h4>Task 2</h4>
+      <p>
+        Виведіть у консоль номер місяця, в якому Ви народилися. Вивчіть чим відрізняється виведення
+        числа та рядка.
+      </p>
+    </section>
+
+    <section>
+      <h4>Task 3</h4>
+      <p>Виведіть у консоль рядок: 'Ласкаво '+'запрошуємо '+' на курс'</p>
+      <pre>'Ласкаво '+'запрошуємо '+' на курс'</pre>
+    </section>
+
+    <section>
+      <h4>Task 4</h4>
+      <p>
+        За допомогою метода alert() виведіть число 2023. Після спрацювання коду - закоментуйте його,
+        щоб не заважав подальшій розробці
+      </p>
+    </section>
+
+    <section>
+      <h4>Task 5</h4>
+      <p>
+        За допомогою console.log() виведіть результат операції 2023 – 200. Перевірте результат у
+        консолі.
+      </p>
+    </section>
+
+    <section>
+      <h4>Task 6</h4>
+      <p>
+        На сторінці створено div#six. За допомогою document.getElementById запишіть в div#six текст
+        Hello World.
+      </p>
+      <div id="six"></div>
+    </section>
+
+    <section>
+      <h4>Task 7</h4>
+      <p>
+        На сторінці створено div#seven. За допомогою document.getElementById запишіть в даний
+        елемент результат множення 12 на 12. Множення можна зробити за допомогою знака зірочки
+        (shift + 8).
+      </p>
+      <div id="seven"></div>
+    </section>
+
+    <section>
+      <h4>Task 8</h4>
+      <p>
+        На сторінці створено div.output-8. За допомогою document.querySelector() запишіть текст
+        &#x27;task-8&#x27;.
+      </p>
+      <div class="output-8"></div>
+    </section>
+
+    <section>
+      <h4>Task 9</h4>
+      <p>На сторінці створена верстка:</p>
+      <pre>
+&#x3C;h2&#x3E;Hello &#x3C;span class=&#x22;output-8&#x22;&#x3E;everyone&#x3C;/span&#x3E;&#x3C;/h2&#x3E;
+</pre
+      >
+      <h2>Hello <span class="output-8">everyone</span></h2>
+      <p>Замініть за допомогою querySelector() текст всередині span на 'world'</p>
+    </section>
+
+    <section>
+      <h4>Task 10</h4>
+      <p>
+        На сторінці створено div.output-10. За допомогою innerHTML запишіть всередину наступний
+        рядок '&#x3C;h2&#x3E;Hi&#x3C;/h2&#x3E;'.
+      </p>
+      <div class="output-10"></div>
+    </section>
+
+    <section>
+      <h4>Task 11</h4>
+      <p>
+        На сторінці створено div.output-11. Запишіть всередину рядок '123'. Для запису
+        використовуйте innerHTML. Другою операцією – допишіть у div.output-11 рядок '456'. Для
+        додавання запису застосовуйте +=.
+      </p>
+      <div class="output-11"></div>
+    </section>
+
+    <section>
+      <h4>Task 12</h4>
+      <p>
+        На сторінці створено div.output-12. Отримайте його у змінну a. За допомогою innerHTML
+        запишіть змінну всередину a число 3.1415. Вивчіть як у JS пишуться дробні числа - через
+        крапку чи через кому
+      </p>
+      <div class="output-12"></div>
+    </section>
+
+    <section>
+      <h4>Task 13</h4>
+      <p>На сторінці створено div.output-13. Отримайте його у змінну output13.</p>
+      <p>За допомогою innerHTML запишіть рядок:</p>
+      <pre>
+&#x27;&#x3C;img src=&#x22;https://itgid.info/img/js20/js20_unit_01.png&#x22; alt=&#x22;js&#x22;&#x3E;&#x27;</pre
+      >
+      <p>
+        Зверніть увагу. Вам доведеться вставити рядок, який вже містить лапки. Головне щоб лапки
+        чергувалися.
+      </p>
+      <p>
+        Тому при вставці оберніть цей рядок одинарними лапками. Якщо все зроблено правильно - на
+        сторінці з'явиться картинка.
+      </p>
+      <div class="output-13">Тут звʼявиться зображення.</div>
+    </section>
+
+    <section>
+      <h4>Task 14</h4>
+      <p>
+        Створіть дві змінні num1 = 6, num2 = 3. У div.output-14 виведіть результат множення num1 на
+        num2.
+      </p>
+      <div class="output-14"></div>
+    </section>
+
+    <section>
+      <h4>Task 15</h4>
+      <p>Створіть дві змінні y1 = 6, y2 = 3. У div.output-15 виведіть результат поділу y1 на y2.</p>
+      <div class="output-15"></div>
+    </section>
+
+    <section>
+      <h4>Task 16</h4>
+      <p>
+        Створіть дві змінні x1 = Hello, x2 = 5. У div.output-16 виведіть суму x1 + x2. Вивчіть
+        результат операції.
+      </p>
+      <div class="output-16"></div>
+    </section>
+
+    <section>
+      <h4>Task 17</h4>
+      <p>
+        Отримайте div.output-17 у змінну output17. Виведіть цю змінну в консоль. Вивчіть результат
+        виводу.
+      </p>
+      <div class="output-17">Це div.17</div>
+    </section>
+
+    <section>
+      <h4>Task 18</h4>
+      <p>
+        Отримайте div.output-18 у змінну output18. Виведіть цю змінну в консоль. Призначте output18
+        значення 5 (output18 = 5). Виведіть змінну в консоль. Вивчіть результат виводу.
+      </p>
+      <div class="output-18">output-18</div>
+    </section>
+
+    <section>
+      <h4>Task 19</h4>
+      <p>Отримайте div.output-19 у змінну output19. Виведіть у консоль output19.</p>
+      <p>
+        Тепер отримайте у цю ж змінну output19 блок div з класом output-19-test. Виведіть змінну
+        output19 у консоль. Вивчіть, що змінилося.
+      </p>
+      <div class="output-19">Це output-19</div>
+      <div class="output-19-test">Це output-19-test</div>
+    </section>
+
+    <section>
+      <h4>Task 20</h4>
+      <p>
+        Отримайте div.output-20 у змінну output20. За допомогою textContent запишіть у нього рядок
+        &#x27;&#x3C;h2&#x3E;Hi&#x3C;/h2&#x3E;&#x27;. Вивчіть результат. Подивіться, як цей результат
+        виводу відрізняється від виводу в Task-10.
+      </p>
+      <div class="output-20"></div>
+    </section>
+
+    <script src="./unit-01.js"></script>
+  </body>
+</html>
