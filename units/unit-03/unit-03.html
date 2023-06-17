@@ -14,238 +14,249 @@
   </head>
 
   <body>
-    <h1>Unit 03. Оператори If, else, switch case</h1>
+    <h1>Unit 03. Оператори if, else, switch case</h1>
 
     <section>
-      <h4>Task 1.</h4>
+      <h4>Task 01.</h4>
       <p>
-        При натисканні кнопки .b-1 спрацьовує функцію f1. Функція повинна прочитати вміст .i-1 та
-        порівняти його з числом 4 (порівняння ==). Результат порівняння – true або false виведіть у
-        .out-1.
+        При натисканні кнопки .btn-1 спрацьовує функція fn1. Функція повинна прочитати вміст
+        .field-1 та порівняти його з числом 4 (порівняння ==). Результат порівняння – true або false
+        виведіть у .output-1.
       </p>
-      <input type="number" class="i-1" value="7" />
-      <button class="button-primary b-1">Task-1</button>
-      <div class="out-1"></div>
+      <div class="wrapper">
+        <input class="field-1" type="number" value="7" />
+        <button class="btn-1 button-primary">Task-1</button>
+      </div>
+      <div class="output-1"></div>
     </section>
 
     <section>
-      <h4>Task 2.</h4>
+      <h4>Task 02.</h4>
       <p>
-        Дано дві змінні a21 і a22. При натисканні кнопки .b-2 запускається функція f2. Функція
-        повинна порівняти змінні за допомогою if else і вивести в .out-2 більше число. Варіант
+        Дано дві змінні a2_1 і a2_2. При натисканні кнопки .btn-2 запускається функція fn2. Функція
+        повинна порівняти змінні за допомогою if else і вивести в .output-2 більше число. Варіант
         рівності змінних не розглядається.
       </p>
-      <button class="button-primary b-2">Task-2</button>
-      <div class="out-2"></div>
+      <button class="btn-2 button-primary">Task-2</button>
+      <div class="output-2"></div>
     </section>
 
     <section>
-      <h4>Task 3.</h4>
+      <h4>Task 03.</h4>
       <p>
-        Дано два input - .i-31 і .i-32, обидва - input[type=number]. При натисканні кнопки .b-3
-        спрацьовує функція f3. Функція має порівняти числа з input, вивести в .out-3 більше число.
+        Дано два input - .field-3-1 і .field-3-2, обидва - input[type=number]. При натисканні кнопки
+        .btn-3 спрацьовує функція fn3. Функція має порівняти числа з input, вивести в .output-3
+        більше число.
       </p>
       <p>Проведіть самостійний тест роботи, введіть пари чисел 4 та 9, 9 та 22, 5 та 111.</p>
-      <div><input type="number" class="i-31" value="33" /></div>
-      <div><input type="number" class="i-32" value="9" /></div>
-      <button class="button-primary b-3">Task-3</button>
-      <div class="out-3"></div>
+      <div><input class="field-3-1" type="number" value="33" /></div>
+      <div><input class="field-3-2" type="number" value="9" /></div>
+      <button class="btn-3 button-primary">Task-3</button>
+      <div class="output-3"></div>
     </section>
 
     <section>
-      <h4>Task 4.</h4>
+      <h4>Task 04.</h4>
       <p>
-        Користувач вводить у .i-4 рік свого народження. Є кнопка .b-4, яка запускає функцію f4.
-        Функція повинна вивести в .out-4 число 1 якщо користувачеві більше або 18 років, і 0 якщо
-        менше.
+        Користувач вводить у .field-4 рік свого народження. Є кнопка .btn-4, яка запускає функцію
+        fn4. Функція повинна вивести в .output-4 число 1 якщо користувачеві більше або 18 років, і 0
+        якщо менше.
       </p>
-      <input type="number" class="i-4" />
-      <button class="button-primary b-4">Task-4</button>
-      <div class="out-4"></div>
+      <input class="field-4" type="number" />
+      <button class="btn-4 button-primary">Task-4</button>
+      <div class="output-4"></div>
     </section>
 
     <section>
-      <h4>Task 5.</h4>
+      <h4>Task 05.</h4>
       <p>
-        На сторінці є input з класом .i-5, куди можна ввести число. Є кнопка b-5, яка запускає
-        функцію f5. Функція повинна вивести в .out-5 символ 'm' якщо число менше нуля, 0 якщо число
-        дорівнює нулю і 1 якщо число більше нуля.
+        На сторінці є input з класом .field-5, куди можна ввести число. Є кнопка .btn-5, яка
+        запускає функцію fn5. Функція повинна вивести в .output-5 слово 'below' якщо число менше
+        нуля, 'zero' якщо число дорівнює нулю і 'above' якщо число більше нуля.
       </p>
-      <input type="number" class="i-5" />
-      <button class="button-primary b-5">Task-5</button>
-      <div class="out-5"></div>
+      <input class="field-5" type="number" />
+      <button class="btn-5 button-primary">Task-5</button>
+      <div class="output-5"></div>
     </section>
 
     <section>
-      <h4>Task 6.</h4>
+      <h4>Task 06.</h4>
       <p>
-        На сторінці є input із класом .i-6, куди користувач може ввести число. Є кнопка .b-6, яка
-        запускає функцію f6. Функція повинна вивести в .out-6 слово even якщо число парне і odd якщо
-        непарне. Для перевірки парності використовується залишок від ділення на 2 (оператор %). Якщо
-        залишок дорівнює нулю – парне, ні – непарне.
+        На сторінці є input.field-6, куди користувач може ввести число. Є кнопка .btn-6, яка
+        запускає функцію fn6. Функція повинна вивести в .output-6 слово 'even' якщо число парне і
+        'odd' якщо непарне. Для перевірки парності використовується залишок від ділення на 2
+        (оператор %). Якщо залишок дорівнює нулю – парне, ні – непарне.
       </p>
-      <input type="number" class="i-6" value="7" />
-      <button class="button-primary b-6">Task-6</button>
-      <div class="out-6"></div>
+      <input class="field-6" type="number" value="7" />
+      <button class="btn-6 button-primary">Task-6</button>
+      <div class="output-6"></div>
     </section>
 
     <section>
-      <h4>Task 7.</h4>
+      <h4>Task 07.</h4>
       <p>
-        Дано два input - .i-71 і .i-72, обидва - input[type=number]. При натисканні кнопки .b-7
-        спрацьовує функція f7. Функція повинна число з .i-71 піднести до ступеня .i-72, вивести
-        результат у .out-7. Для піднесення до ступеня можна використовувати ** або Math.pow.
+        Дано два input - .field-7-1 і .field-7-2, обидва - input[type=number]. При натисканні кнопки
+        .btn-7 спрацьовує функція fn7. Функція повинна число з .field-7-1 піднести до ступеня
+        .field-7-2, вивести результат у .output-7. Для піднесення до ступеня можна використовувати
+        ** або Math.pow.
       </p>
-      <div><input type="number" class="i-71" value="3" /></div>
-      <div><input type="number" class="i-72" value="2" /></div>
-      <button class="button-primary b-7">Task-7</button>
-      <div class="out-7"></div>
+      <div><input class="field-7-1" type="number" value="3" /></div>
+      <div><input class="field-7-2" type="number" value="2" /></div>
+      <button class="btn-7 button-primary">Task-7</button>
+      <div class="output-7"></div>
     </section>
 
     <section>
-      <h4>Task 8.</h4>
+      <h4>Task 08.</h4>
       <p>
-        Дано select s-8, який містить 3 значення: 1, 2, 3. Дана кнопка b-8. При натисканні
-        спрацьовує функція f8. Функція повинна отримати обране в select число, потім за допомогою
-        switch case порівняти його по черзі з 1, 2, 3. І якщо вибране число - 1, то вивести в .out-8
-        рядок one, якщо 2 - two, якщо 3 - three.
+        Дано select.select-8, який містить 3 значення: 1, 2, 3 та кнопка .btn-8. При натисканні
+        спрацьовує функція fn8. Функція повинна отримати обране в select число, потім за допомогою
+        switch case порівняти його по черзі з 1, 2, 3. І якщо вибране число - 1, то вивести в
+        .output-8 рядок 'one', якщо 2 - 'two', якщо 3 - 'three'.
       </p>
       <div>
-        <select class="s-8">
+        <select class="select-8">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
         </select>
       </div>
-      <button class="button-primary b-8">Task-8</button>
-      <div class="out-8"></div>
+      <button class="btn-8 button-primary">Task-8</button>
+      <div class="output-8"></div>
     </section>
 
     <section>
-      <h4>Task 9.</h4>
+      <h4>Task 09.</h4>
       <p>
-        Є input з класом .i-9, куди користувач може ввести номер квартири. Є кнопка .b-9, яка
-        запускає функцію f9. Функція має вивести в .out-9 номер під'їзду, де знаходиться квартира.
+        Є input.field-9, куди користувач може ввести номер квартири. Є кнопка .btn-9, яка запускає
+        функцію fn9. Функція має вивести в .output-9 номер під'їзду, де знаходиться квартира.
       </p>
       <ul>
-        <li>якщо від 1 включно до 32 включно - вивести цифру 1</li>
+        <li>якщо від 1 (включно) до 32 (включно) - вивести цифру 1</li>
         <li>якщо від 33 (включно) до 43 (включно) - вивести 2</li>
         <li>якщо від 44 (включно) до 64 (включно) – то 3</li>
-        <li>інакше вивести 0.</li>
+        <li>інакше вивести 0</li>
       </ul>
-      <input type="number" class="i-9" />
-      <button class="button-primary b-9">Task-9</button>
-      <div class="out-9"></div>
+      <input class="field-9" type="number" />
+      <button class="btn-9 button-primary">Task-9</button>
+      <div class="output-9"></div>
     </section>
 
     <section>
       <h4>Task 10.</h4>
-      <p>Дано select .s-100. Після натискання кнопки, виведіть value вибраного option в .out-10.</p>
+      <p>
+        Дано select.select-10. Після натискання кнопки, виведіть <code>value</code> вибраного
+        <code>option</code>
+        в .output-10.
+      </p>
       <div>
-        <select class="s-100">
+        <select class="select-10">
           <option value="6">six</option>
           <option value="7">seven</option>
           <option value="11">eleven</option>
           <option value="9">nine</option>
         </select>
       </div>
-      <button class="button-primary b-10">Task-10</button>
-      <div class="out-10"></div>
+      <button class="btn-10 button-primary">Task-10</button>
+      <div class="output-10"></div>
     </section>
 
     <section>
       <h4>Task 11.</h4>
       <p>
-        Дано select .s-110. Після зміни стану select (подія onchange) виведіть value вибраного
-        option в .out-11.
+        Дано select.select-11. Після зміни стану select (подія onchange) виведіть
+        <code>value</code> вибраного option в .output-11.
       </p>
       <div>
-        <select class="s-110">
+        <select class="select-11">
           <option value="6">six</option>
           <option value="7">seven</option>
           <option value="11">eleven</option>
           <option value="9">nine</option>
         </select>
       </div>
-      <div class="out-11"></div>
+      <div class="output-11"></div>
     </section>
 
     <section>
       <h4>Task 12.</h4>
       <p>
-        Дано input .i-120. Після натискання кнопки отримайте значення з input в змінну, а потім
-        виведіть в .out-12 typeof отриманої змінної. Typeof дозволяє визначити тип даних.
+        Дано input.field-12. Після натискання кнопки отримайте значення з input в змінну, а потім
+        виведіть в .output-12 typeof отриманої змінної. <code>typeof</code> дозволяє визначити тип
+        даних.
       </p>
-      <input type="text" class="i-120" />
-      <button class="button-primary b-12">Task-12</button>
-      <div class="out-12"></div>
+      <input class="field-12" type="text" />
+      <button class="btn-12 button-primary">Task-12</button>
+      <div class="output-12"></div>
     </section>
 
     <section>
       <h4>Task 13.</h4>
       <p>
-        Дано input i-130. На відміну від попереднього завдання – input type number. Після натискання
-        кнопки отримайте значення з input в змінну, а потім виведіть в out-13 typeof отриманої
-        змінної. Typeof дозволяє визначити тип даних. Якщо ви правильно все зробили - тип даних буде
-        string! Подумайте, чому так?
+        Дано input.field-13. На відміну від попереднього завдання – input type number. Після
+        натискання кнопки отримайте значення з input в змінну, а потім виведіть в output-13
+        <code>typeof</code>
+        отриманої змінної. Typeof дозволяє визначити тип даних. Якщо ви правильно все зробили - тип
+        даних буде string! Подумайте, чому так?
       </p>
-      <input type="number" class="i-130" />
-      <button class="button-primary b-13">Task-13</button>
-      <div class="out-13"></div>
+      <input class="field-13" type="number" />
+      <button class="btn-13 button-primary">Task-13</button>
+      <div class="output-13"></div>
     </section>
 
     <section>
       <h4>Task 14.</h4>
       <p>
-        Дано input .i-141 та .i-142, [type=number]. Дано select .s-143, який містить чотири операції
-        - +, -, *, /. Дано кнопку b-14, при натисканні на яку спрацьовує функція f14. Функція
-        виводить в .out-14 результат операції обраної в 3-му select до числа введених у першому і
-        другому input. Наприклад, вибрано 1 13 +, потрібно вивести результат операції 1+13 тобто.
-        14.
+        Дано input.field-14-1 та input.field-14-2, [type=number]. Дано select.select-14, який
+        містить чотири операції - +, -, *, /. Дано кнопку .btn-14, при натисканні на яку спрацьовує
+        функція f14. Функція виводить в .output-14 результат операції обраної в 3-му
+        <code>select</code> до числа введених у першому і другому input. Наприклад, вибрано 1 13 +,
+        потрібно вивести результат операції 1+13 тобто. 14.
       </p>
-      <div><input type="number" class="i-141" value="8" /></div>
-      <div><input type="number" class="i-142" value="7" /></div>
+      <div><input class="field-14-1" type="number" value="8" /></div>
+      <div><input class="field-14-2" type="number" value="7" /></div>
       <div>
-        <select class="s-143">
+        <select class="select-14">
           <option value="+">+</option>
           <option value="-">-</option>
           <option value="*">*</option>
           <option value="/">/</option>
         </select>
       </div>
-      <button class="button-primary b-14">Task-14</button>
-      <div class="out-14"></div>
+      <button class="btn-14 button-primary">Task-14</button>
+      <div class="output-14"></div>
     </section>
 
     <section>
       <h4>Task 15.</h4>
       <p>
-        Дано select .s-151 та .s-152, кожен з яких містить 1 та 0. Дано select .s-153, який містить
-        дві операції - && та || . Дана кнопка .b-15, при натисканні на яку спрацьовує функція f15.
-        Функція виводить в .out-15 результат логічних операцій вибраних у третьому select до числа
-        вибраних у першому і другому select. Наприклад, вибрано 1 1 &&, потрібно вивести результат
-        операції 1&&1 тобто. 1 чи 0.
+        Дано select.select-15-1 та .select-15-2, кожен з яких містить 1 та 0. Дано
+        select.select-15-3, який містить дві логічні операції - <code>&&</code> та <code>||</code> .
+        Дана кнопка .btn-15, при натисканні на яку спрацьовує функція fn15. Функція виводить в
+        .output-15 результат логічних операцій вибраних у третьому <code>select</code> до числа
+        вибраних у першому і другому <code>select</code>. Наприклад, вибрано <code>1</code>
+        <code>1</code> <code>&&</code>, потрібно вивести результат операції "1 && 1", тобто 1 чи 0.
       </p>
       <div>
-        <select class="s-151">
+        <select class="select-15-1">
           <option value="1">1</option>
           <option value="0">0</option>
         </select>
       </div>
       <div>
-        <select class="s-152">
+        <select class="select-15-2">
           <option value="1">1</option>
           <option value="0">0</option>
         </select>
       </div>
       <div>
-        <select class="s-153">
+        <select class="select-15-3">
           <option value="&&">&&</option>
           <option value="||">||</option>
         </select>
       </div>
-      <button class="button-primary b-15">Task-15</button>
-      <div class="out-15"></div>
+      <button class="btn-15 button-primary">Task-15</button>
+      <div class="output-15"></div>
     </section>
 
     <script src="./unit-03.js"></script>
