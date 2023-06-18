@@ -87,7 +87,19 @@ document.querySelector(".b-5").onclick = f5;
 // Task 6.
 // На сторінці є input із класом .i-6, куди користувач може ввести число. Є кнопка .b-6, яка запускає функцію f6. Функція повинна вивести в .out-6 слово even якщо число парне і odd якщо непарне. Для перевірки парності використовується залишок від ділення на 2 (оператор %). Якщо залишок дорівнює нулю – парне, ні – непарне.
 
-function f6() {}
+function f6() {
+  let input6 = document.querySelector(".i-6");
+  const a = parseInt(input6.value);
+  let even = a % 2;
+
+  if (even === 0) {
+    document.querySelector(".out-6").innerHTML = "Even";
+  } else if (even > 0 || even < 0) {
+    document.querySelector(".out-6").innerHTML = "Odd";
+  } else {
+    document.querySelector(".out-6").innerHTML = "ВВЕДІТЬ ЗНАЧЕННЯ";
+  }
+}
 
 document.querySelector(".b-6").onclick = f6;
 
