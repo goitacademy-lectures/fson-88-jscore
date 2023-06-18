@@ -4,7 +4,10 @@ body {
   color: var(--secondary-text);
 
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) minmax(280px, 1200px) minmax(20px, 1fr);
+  grid-template-columns: minmax(20px, 1fr) minmax(280px, 1200px) minmax(
+      20px,
+      1fr
+    );
 }
 
 section,
@@ -258,4 +261,10 @@ fieldset {
   background-color: var(--light-primary-color);
   border: 1px solid var(--primary-color);
   border-radius: 0.3rem;
+}
+
+.title {
+  font-size: 32px;
+  color: teal;
+  text-decoration: underline;
 }
