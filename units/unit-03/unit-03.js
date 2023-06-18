@@ -191,7 +191,11 @@ document.querySelector(".s-110").onchange = f11;
 // Task 12
 //  Дано input .i-120. Після натискання кнопки отримайте значення з input в змінну, а потім виведіть в .out-12 typeof отриманої змінної. Typeof дозволяє визначити тип даних.
 
-function f12() {}
+function f12() {
+  let input12 = document.querySelector(".i-120").value;
+  let typeInput = typeof input12;
+  document.querySelector(".out-12").innerHTML = typeInput;
+}
 
 document.querySelector(".b-12").onclick = f12;
 
