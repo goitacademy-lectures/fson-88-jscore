@@ -169,14 +169,22 @@ document.querySelector(".b-9").onclick = f9;
 // Task 10
 // Дано select .s-100. Після натискання кнопки, виведіть value вибраного option в .out-10.
 
-function f10() {}
+function f10() {
+  let select8 = document.querySelector(".s-100");
+  const a = select8.value;
+  document.querySelector(".out-10").innerHTML = a;
+}
 
 document.querySelector(".b-10").onclick = f10;
 
 // Task 11
 // Дано select .s-110. Після зміни стану select (подія onchange) виведіть value вибраного option в .out-11.
 
-function f11() {}
+function f11() {
+  let select11 = document.querySelector(".s-110");
+  const a = select11.value;
+  document.querySelector(".out-11").innerHTML = a;
+}
 
 document.querySelector(".s-110").onchange = f11;
 
