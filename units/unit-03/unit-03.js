@@ -28,7 +28,22 @@ document.querySelector(".b-2").onclick = f2;
 // Дано два input - .i-31 і .i-32, обидва - input[type=number]. При натисканні кнопки .b-3 спрацьовує функція f3. Функція має порівняти числа з input, вивести в .out-3 більше число.
 // Проведіть самостійний тест роботи, введіть пари чисел 4 та 9, 9 та 22, 5 та 111.
 
-function f3() {}
+function f3() {
+  let input1 = document.querySelector(".i-31");
+  let input2 = document.querySelector(".i-32");
+
+  const a = parseInt(input1.value);
+  const b = parseInt(input2.value);
+  if (a > b) {
+    document.querySelector(".out-3").innerHTML = a;
+  } else if (a < b) {
+    document.querySelector(".out-3").innerHTML = b;
+  } else if (a === b) {
+    document.querySelector(".out-3").innerHTML = "Числа рівні";
+  } else {
+    document.querySelector(".out-3").innerHTML = "ВВЕДІТЬ ЗНАЧЕННЯ";
+  }
+}
 
 document.querySelector(".b-3").onclick = f3;
 
