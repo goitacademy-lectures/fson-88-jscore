@@ -1,17 +1,26 @@
 // Task 1
 // При натисканні кнопки .b-1 спрацьовує функцію f1. Функція повинна прочитати вміст .i-1 та порівняти його з числом 4 (порівняння ==). Результат порівняння – true або false виведіть у .out-1.
 
-function f1() {}
+function f1() {
+  let a = document.querySelector(".i-1");
+  document.querySelector(".out-1").innerHTML = a.value == 4;
+}
 
 document.querySelector(".b-1").onclick = f1;
 
 // Task 2
 // Дано дві змінні a21 і a22. При натисканні кнопки .b-2 запускається функція f2. Функція повинна порівняти змінні за допомогою if else і вивести в .out-2 більше число. Варіант рівності змінних не розглядається.
 
-// let a21 = ;
-// let a22 = ;
+let a21 = 1;
+let a22 = 3;
 
-function f2() {}
+function f2() {
+  if (a21 > a22) {
+    document.querySelector(".out-2").innerHTML = a21;
+  } else {
+    document.querySelector(".out-2").innerHTML = a22;
+  }
+}
 
 document.querySelector(".b-2").onclick = f2;
 
