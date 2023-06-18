@@ -213,7 +213,13 @@ document.querySelector(".b-13").onclick = f13;
 // Task 14
 // Дано input .i-141 та .i-142, [type=number]. Дано select .s-143, який містить чотири операції - +, -, *, /. Дано кнопку b-14, при натисканні на яку спрацьовує функція f14. Функція виводить в .out-14 результат операції обраної в 3-му select до числа введених у першому і другому input. Наприклад, вибрано 1 13 +, потрібно вивести результат операції 1+13 тобто.
 
-function f14() {}
+function f14() {
+  let input141 = document.querySelector(".i-141").value;
+  let input142 = document.querySelector(".i-142").value;
+  let select11 = document.querySelector(".s-143");
+  const a = select11.value;
+  document.querySelector(".out-14").innerHTML = input141 + a + input142;
+}
 
 document.querySelector(".b-14").onclick = f14;
 
