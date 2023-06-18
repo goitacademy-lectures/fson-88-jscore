@@ -202,7 +202,11 @@ document.querySelector(".b-12").onclick = f12;
 // Task 13
 //  Дано input i-130. На відміну від попереднього завдання – input type number. Після натискання кнопки отримайте значення з input в змінну, а потім виведіть в out-13 typeof отриманої змінної. Typeof дозволяє визначити тип даних. Якщо ви правильно все зробили - тип даних буде string! Подумайте, чому так?
 
-function f13() {}
+function f13() {
+  let input13 = document.querySelector(".i-130").value;
+  let typeInput = typeof input13;
+  document.querySelector(".out-13").innerHTML = typeInput;
+}
 
 document.querySelector(".b-13").onclick = f13;
 
