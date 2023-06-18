@@ -120,7 +120,23 @@ document.querySelector(".b-7").onclick = f7;
 // Task 8.
 // Дано select s-8, який містить 3 значення: 1, 2, 3. Дана кнопка b-8. При натисканні спрацьовує функція f8. Функція повинна отримати обране в select число, потім за допомогою switch case порівняти його по черзі з 1, 2, 3. І якщо вибране число - 1, то вивести в .out-8 рядок one, якщо 2 - two, якщо 3 - three.
 
-function f8() {}
+function f8() {
+  let select8 = document.querySelector(".s-8");
+  const a = parseInt(select8.value);
+
+  switch (a) {
+    case 1:
+      document.querySelector(".out-8").innerHTML = "One";
+      break;
+
+    case 2:
+      document.querySelector(".out-8").innerHTML = "Two";
+      break;
+
+    default:
+      document.querySelector(".out-8").innerHTML = "Three";
+  }
+}
 
 document.querySelector(".b-8").onclick = f8;
 
