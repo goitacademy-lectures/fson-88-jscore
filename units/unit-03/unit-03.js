@@ -147,7 +147,22 @@ document.querySelector(".b-8").onclick = f8;
 //  якщо від 44 (включно) до 64 (включно) – то 3
 //  інакше вивести 0.
 
-function f9() {}
+function f9() {
+  const input9 = document.querySelector(".i-9");
+  const roomNumber = parseInt(input9.value);
+  let message;
+
+  if (roomNumber >= 1 && roomNumber <= 32) {
+    message = "1";
+  } else if (roomNumber >= 33 && roomNumber <= 43) {
+    message = "2";
+  } else if (roomNumber >= 44 && roomNumber <= 64) {
+    message = "3";
+  } else {
+    message = "0";
+  }
+  document.querySelector(".out-9").innerHTML = message;
+}
 
 document.querySelector(".b-9").onclick = f9;
 
