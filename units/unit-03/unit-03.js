@@ -29,7 +29,7 @@ document.querySelector(".b-2").onclick = f2;
 // Проведіть самостійний тест роботи, введіть пари чисел 4 та 9, 9 та 22, 5 та 111.
 
 function f3() {
-  let = document.querySelector(".i-31");
+  let input1 = document.querySelector(".i-31");
   let input2 = document.querySelector(".i-32");
 
   const a = parseInt(input1.value);
@@ -106,7 +106,14 @@ document.querySelector(".b-6").onclick = f6;
 // Task 7.
 // Дано два input - .i-71 і .i-72, обидва - input[type=number]. При натисканні кнопки .b-7 спрацьовує функція f7. Функція повинна число з .i-71 піднести до ступеня .i-72, вивести результат у .out-7. Для піднесення до ступеня можна використовувати ** або Math.pow.
 
-function f7() {}
+function f7() {
+  let input71 = document.querySelector(".i-71");
+  let input72 = document.querySelector(".i-72");
+
+  const a = parseInt(input71.value);
+  const b = parseInt(input72.value);
+  document.querySelector(".out-7").innerHTML = Math.pow(a, b);
+}
 
 document.querySelector(".b-7").onclick = f7;
 
