@@ -29,7 +29,7 @@ document.querySelector(".b-2").onclick = f2;
 // Проведіть самостійний тест роботи, введіть пари чисел 4 та 9, 9 та 22, 5 та 111.
 
 function f3() {
-  let input1 = document.querySelector(".i-31");
+  let = document.querySelector(".i-31");
   let input2 = document.querySelector(".i-32");
 
   const a = parseInt(input1.value);
@@ -50,14 +50,37 @@ document.querySelector(".b-3").onclick = f3;
 // Task 4.
 // Користувач вводить у .i-4 рік свого народження. Є кнопка .b-4, яка запускає функцію f4.Функція повинна вивести в .out-4 число 1 якщо користувачеві більше або 18 років, і 0 якщо менше.
 
-function f4() {}
+function f4() {
+  let personalAge = document.querySelector(".i-4").value;
+  let currentYear = 2023;
+  let currentAge = currentYear - personalAge;
+
+  if (currentAge >= 18) {
+    document.querySelector(".out-4").innerHTML = Number(true);
+  } else {
+    document.querySelector(".out-4").innerHTML = Number(false);
+  }
+}
 
 document.querySelector(".b-4").onclick = f4;
 
 // Task 5.
 // На сторінці є input з класом .i-5, куди можна ввести число. Є кнопка b-5, яка запускає функцію f5. Функція повинна вивести в .out-5 символ 'm' якщо число менше нуля, 0 якщо число дорівнює нулю і 1 якщо число більше нуля.
 
-function f5() {}
+function f5() {
+  let input1 = document.querySelector(".i-5");
+  const a = parseInt(input1.value);
+
+  if (a <= -1) {
+    document.querySelector(".out-5").innerHTML = "m";
+  } else if (a === 0) {
+    document.querySelector(".out-5").innerHTML = 0;
+  } else if (a > 0) {
+    document.querySelector(".out-5").innerHTML = 1;
+  } else {
+    document.querySelector(".out-5").innerHTML = "ВВЕДІТЬ ЗНАЧЕННЯ";
+  }
+}
 
 document.querySelector(".b-5").onclick = f5;
 
