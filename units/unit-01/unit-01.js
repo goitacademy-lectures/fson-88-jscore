@@ -1,36 +1,41 @@
 // Task 1.
 // Виведіть у консоль ваше ім'я. Нагадування – під час роботи, консоль відкрита завжди!
-// console.log();
+console.log("Svitlana");
 
 // Task 2.
 //  Виведіть у консоль номер місяця, в якому Ви народилися. Вивчіть чим відрізняється виведення числа та рядка.
-
+console.log(10);
 // Task 3.
 // Виведіть у консоль рядок: 'Ласкаво '+'запрошуємо '+' на курс'
-
+console.log('Ласкаво '+'запрошуємо '+' на курс')
 // Task 4.
 //  За допомогою метода alert() виведіть число 2023. Після спрацювання коду - закоментуйте його, щоб не заважав подальшій розробці
-
+// alert(2023);
 // Task 5.
 // За допомогою console.log() виведіть результат операції 2023 – 200. Перевірте результат у консолі.
-
+console.log(2023 - 200);
 // Task 6.
 // На сторінці створено div#six. За допомогою document.getElementById запишіть в div#six текст 'Hello World'.
-
+document.getElementById('six').innerHTML = "Hello World";
 // Task 7.
 // На сторінці створено div#seven. За допомогою document.getElementById запишіть в даний елемент результат множення 12 на 12. Множення можна зробити за допомогою знака зірочки (shift + 8).
-
+document.getElementById('seven').innerHTML = 12 * 12;
 // Task 8.
 // На сторінці створено div.output-8. За допомогою document.querySelector() запишіть текст 'task-8'.
-
+document.querySelector('.output-8').innerHTML = 'task-8';
+console.log(querySelector('.output-8'));
 // Task 9.
 // На сторінці створена верстка:
 // <h2>Hello <span class="out-8">everyone</span></h2>
 // Замініть за допомогою querySelector() текст всередині span на 'world'
 // Тобто, результат має виглядати так: <h2>Hello <span class="out-8">world</span></h2>
-
+document.querySelector('h2 > .output-8').innerHTML = 'world';
+console.log(document.querySelector('.output-8'));
 // Task 10.
 // На сторінці створено div.output-10. За допомогою innerHTML запишіть всередину наступний рядок '<h2>Hi</h2>'.
+
+const text = `<h2 style='color: red'>"Hi"</h2>`
+document.querySelector('.output-10').innerHTML = text;
 
 // Task 11.
 // На сторінці створено div.output-11. Запишіть всередину рядок '123'. Для запису використовуйте innerHTML. Другою операцією – допишіть у div.output-11 рядок '456'. Для додавання запису застосовуйте +=.
