@@ -1,17 +1,26 @@
 // Task 1
 // При натисканні кнопки .b-1 спрацьовує функцію f1. Функція повинна прочитати вміст .i-1 та порівняти його з числом 4 (порівняння ==). Результат порівняння – true або false виведіть у .out-1.
 
-function f1() {}
+function f1() {
+    const a = document.querySelector(".i-1").value == 4;
+    document.querySelector(".out-1").innerHTML = a;
+}
 
 document.querySelector(".b-1").onclick = f1;
 
 // Task 2
 // Дано дві змінні a21 і a22. При натисканні кнопки .b-2 запускається функція f2. Функція повинна порівняти змінні за допомогою if else і вивести в .out-2 більше число. Варіант рівності змінних не розглядається.
 
-// let a21 = ;
-// let a22 = ;
+let a21 = 334;
+let a22 = 24;
 
-function f2() {}
+function f2() {
+    if (a21 > a22) {
+        document.querySelector(".out-2").innerHTML = a21;
+    } else {
+        document.querySelector(".out-2").innerHTML = a22;
+    }
+}
 
 document.querySelector(".b-2").onclick = f2;
 
@@ -19,14 +28,22 @@ document.querySelector(".b-2").onclick = f2;
 // Дано два input - .i-31 і .i-32, обидва - input[type=number]. При натисканні кнопки .b-3 спрацьовує функція f3. Функція має порівняти числа з input, вивести в .out-3 більше число.
 // Проведіть самостійний тест роботи, введіть пари чисел 4 та 9, 9 та 22, 5 та 111.
 
-function f3() {}
+function f3() {
+    const a = Number(document.querySelector(".i-31").value);
+    const b = Number(document.querySelector(".i-32").value);
+    document.querySelector(".out-3").innerHTML = a > b ? a : b;
+}
 
 document.querySelector(".b-3").onclick = f3;
 
 // Task 4.
 // Користувач вводить у .i-4 рік свого народження. Є кнопка .b-4, яка запускає функцію f4.Функція повинна вивести в .out-4 число 1 якщо користувачеві більше або 18 років, і 0 якщо менше.
 
-function f4() {}
+const yearToday = 2023;
+function f4() {
+    const age = yearToday - document.querySelector(".i-4").value;
+    document.querySelector(".out-4").innerHTML = age >= 18 ? age : 0;
+}
 
 document.querySelector(".b-4").onclick = f4;
 

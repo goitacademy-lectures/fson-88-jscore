@@ -119,7 +119,7 @@ document.querySelector(".b-14").onclick = t14;
 //  Після натискання кнопки .b-15 виконується функція t15. Вона встановлює .i-15 властивість style.border = "4px solid red".
 
 function t15() {
-  document.querySelector(".b-15").innerHTML
+  document.querySelector(".b-15").insertAdjacentElement = 'style.border = "4px solid red"';
 }
 
 document.querySelector(".b-15").onclick = t15;
@@ -127,7 +127,11 @@ document.querySelector(".b-15").onclick = t15;
 // Task 16.
 // Після натискання кнопки .b-16 виконується функція t16. Функція отримує з .i-16-1 та i-16-2 числа. Виведіть у .out-16 суму даних чисел по натисканню кнопки b-16. Не переводимо отримані значення з input у число!
 
-function t16() {}
+function t16() {
+  const a = document.querySelector(".i-16-1").value;
+  const b = document.querySelector(".i-16-2").value;
+  document.querySelector(".out-16").innerHTML = a + b;
+}
 
 document.querySelector(".b-16").onclick = t16;
 
@@ -146,14 +150,21 @@ document.querySelector(".b-17").onclick = t17;
 // Task 18.
 // Після натискання кнопки .b-18 виконується функція t18. Функція отримує з .i-18 число, яку потірбно присвоїти у змінну a. Виводить в out-18 результат операції parseFloat(a). Спробуйте ввести значення 5, 33.02, 33.9a, -20.01
 
-function t18() {}
+function t18() {
+  const a = document.querySelector(".i-18").value;
+  document.querySelector(".out-18").innerHTML = parseFloat(a);
+}
 
 document.querySelector(".b-18").onclick = t18;
 
 // Task 19.
 // Після натискання кнопки .b19 функція t19 повинна в out-19 вивести суму двох відʼємних чисел із input .i-19-1 та .i-19-2.
 
-function t19() {}
+function t19() {
+  const a = document.querySelector(".i-19-1").value;
+  const b = document.querySelector(".i-19-2").value;
+  document.querySelector(".out-19").innerHTML = Number(a) + Number(b);
+}
 
 document.querySelector(".b-19").onclick = t19;
 
@@ -163,8 +174,10 @@ document.querySelector(".b-19").onclick = t19;
 let count = 0;
 
 function t20() {
+  count += 1;
   // порахувати нове значення для count
   // нижче додати вівід в out-20
+  document.querySelector(".out-20").innerHTML = count;
 }
 
 document.querySelector(".b-20").onclick = t20;
