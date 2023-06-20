@@ -50,28 +50,62 @@ document.querySelector(".b-4").onclick = f4;
 // Task 5.
 // На сторінці є input з класом .i-5, куди можна ввести число. Є кнопка b-5, яка запускає функцію f5. Функція повинна вивести в .out-5 символ 'm' якщо число менше нуля, 0 якщо число дорівнює нулю і 1 якщо число більше нуля.
 
-function f5() {}
+function f5() {
+    const a = document.querySelector(".i-5").value;
+    let b;
+    if (a < 0) {
+        b = 'm';         
+    } else if (Number(a) === 0) {
+        b = 0;
+    } else {
+        b = 1;
+    }
+    console.log('task 7 a=' + a + ' b=' + b);
+    document.querySelector(".out-5").innerHTML = b;
+}
 
 document.querySelector(".b-5").onclick = f5;
 
 // Task 6.
 // На сторінці є input із класом .i-6, куди користувач може ввести число. Є кнопка .b-6, яка запускає функцію f6. Функція повинна вивести в .out-6 слово even якщо число парне і odd якщо непарне. Для перевірки парності використовується залишок від ділення на 2 (оператор %). Якщо залишок дорівнює нулю – парне, ні – непарне.
 
-function f6() {}
+function f6() {
+    const a = document.querySelector(".i-6").value;
+    document.querySelector(".out-6").innerHTML = a % 2 !== 0 ? 'odd' : 'even';
+}
 
 document.querySelector(".b-6").onclick = f6;
 
 // Task 7.
 // Дано два input - .i-71 і .i-72, обидва - input[type=number]. При натисканні кнопки .b-7 спрацьовує функція f7. Функція повинна число з .i-71 піднести до ступеня .i-72, вивести результат у .out-7. Для піднесення до ступеня можна використовувати ** або Math.pow.
 
-function f7() {}
+function f7() {
+    const a = Number(document.querySelector(".i-71").value);
+    const b = Number(document.querySelector(".i-72").value);
+    document.querySelector(".out-7").innerHTML = a ** b;
+}
 
 document.querySelector(".b-7").onclick = f7;
 
 // Task 8.
 // Дано select s-8, який містить 3 значення: 1, 2, 3. Дана кнопка b-8. При натисканні спрацьовує функція f8. Функція повинна отримати обране в select число, потім за допомогою switch case порівняти його по черзі з 1, 2, 3. І якщо вибране число - 1, то вивести в .out-8 рядок one, якщо 2 - two, якщо 3 - three.
 
-function f8() {}
+function f8() {
+    const a = document.querySelector(".s-8").value;
+    let b = '';
+    switch (a) {
+        case '1':
+            b = 'one';
+            break;
+        case '2':
+            b = 'two';
+            break;
+        case '3':
+            b = 'three';
+            break;
+    }
+    document.querySelector(".out-8").innerHTML = b;
+}
 
 document.querySelector(".b-8").onclick = f8;
 
@@ -82,14 +116,29 @@ document.querySelector(".b-8").onclick = f8;
 //  якщо від 44 (включно) до 64 (включно) – то 3
 //  інакше вивести 0.
 
-function f9() {}
+function f9() {
+    const a = Number(document.querySelector(".i-9").value) ;
+    let b;
+    if (a < 1 || a > 64) {
+        b = 0;
+    } else if (a <= 32) {
+        b = 1;
+    } else if (a <= 43) {
+        b = 2;
+    } else {
+        b = 3;
+}
+    document.querySelector(".out-9").innerHTML = b;
+}
 
 document.querySelector(".b-9").onclick = f9;
 
 // Task 10
 // Дано select .s-100. Після натискання кнопки, виведіть value вибраного option в .out-10.
 
-function f10() {}
+function f10() {
+    document.querySelector(".out-10").innerHTML = document.querySelector(".s-100").value;
+}
 
 document.querySelector(".b-10").onclick = f10;
 
