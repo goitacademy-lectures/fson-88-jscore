@@ -241,7 +241,7 @@ function f15() {
     let result;
     if (c = "&&") {
         result = a && b;
-    } else if ("||") {
+    } else if (с = "||") {
         result = a || b;
     }
     document.querySelector(".out-15").innerHTML = result;
