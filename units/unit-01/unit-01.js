@@ -51,7 +51,6 @@ document.querySelector('.output-11').innerHTML += '456';
 // Task 12.
 //  На сторінці створено div.output-12. Отримайте його у змінну a. За допомогою innerHTML запишіть змінну всередину a число 3.1415. Вивчіть як у JS пишуться дробні числа - через крапку чи через кому
 let a;
-a = document.querySelector('.output-12').innerHTML;
 a = 3.1415;
 document.querySelector('.output-12').innerHTML = a;
 
@@ -60,7 +59,7 @@ document.querySelector('.output-12').innerHTML = a;
 //  Зверніть увагу. Вам доведеться вставити рядок, який вже містить лапки. Головне щоб лапки чергувалися.  Тому при вставці оберніть цей рядок одинарними лапками. Якщо все зроблено правильно - на сторінці з'явиться картинка.
 
 let output13;
-output13 = document.querySelector(".output-13").innerHTML;
+output13 = document.querySelector(".output-13").value;
 console.log(output13);
 document.querySelector(".output-13").innerHTML = '<img src="https://itgid.info/img/js20/js20_unit_01.png" alt="js">';
 
@@ -106,5 +105,5 @@ console.log(output19);
 
 let output20 = document.querySelector(".output-20").innerHTML;
 output20 = '<h2>Hi</h2>';
-document.querySelector(".output-20").innerHTML = output20;
+document.querySelector(".output-20").textContent = output20;
 

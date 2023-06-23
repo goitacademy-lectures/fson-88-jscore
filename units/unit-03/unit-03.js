@@ -41,8 +41,8 @@ document.querySelector(".b-3").onclick = f3;
 
 const yearToday = 2023;
 function f4() {
-    const age = yearToday - document.querySelector(".i-4").value;
-    document.querySelector(".out-4").innerHTML = age >= 18 ? age : 0;
+    const age = yearToday - Number(document.querySelector(".i-4").value);
+    document.querySelector(".out-4").innerHTML = age >= 18 ? 1 : 0;
 }
 
 document.querySelector(".b-4").onclick = f4;
@@ -60,7 +60,6 @@ function f5() {
     } else {
         b = 1;
     }
-    console.log('task 7 a=' + a + ' b=' + b);
     document.querySelector(".out-5").innerHTML = b;
 }
 

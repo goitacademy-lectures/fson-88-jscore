@@ -8,30 +8,30 @@ console.log(a * b);
 // Створіть дві змінні c = 7 та d = 9. Виведіть на сторінку в .out-2 результат ділення c на d.
 const c = 7;
 const d = 9;
-document.querySelector(".out-2").innerHTML = c / d;
+document.querySelector(".out-2").textContent = c / d;
 
 // Task 3.
 //  Створіть дві змінні e = 3 та f = 5. Виведіть на сторінку в .out-3 результат додавання e + f.
 const e = 3;
 const f = 5;
-document.querySelector(".out-3").innerHTML = e + f;
+document.querySelector(".out-3").textContent = e + f;
 // Task 4.
 //  Створіть дві змінні e1 = '3' і f1 = 5. Виведіть на сторінку в .out-4 результат додавання e1 + f1. Поясніть відмінність від попереднього результату.
 const e1 = '3';
 const f1 = 5;
-document.querySelector(".out-4").innerHTML = e1 + f1;
+document.querySelector(".out-4").textContent = e1 + f1;
 
 // Task 5.
 //  Створіть дві змінні e2 = 3 і f2 = 0. Виведіть на сторінку в .out-5 результат ділення e2 на f2.
 const e2 = 3;
 const f2 = 0;
-document.querySelector(".out-5").innerHTML = e2 / f2;
+document.querySelector(".out-5").textContent = e2 / f2;
 
 // Task 6.
 //  Створіть дві змінні e3 = 3 та f3 = 'Hello'. Виведіть на сторінку в .out-6 результат додавання двох змінних.
 const e3 = 3;
 const f3 = 'Hello';
-document.querySelector(".out-6").innerHTML = e3 + f3;
+document.querySelector(".out-6").textContent = e3 + f3;
 
 
 // Task 7.
@@ -39,7 +39,7 @@ document.querySelector(".out-6").innerHTML = e3 + f3;
 
 const e4 = 3;
 const f4 = 'Hello';
-document.querySelector(".out-7").innerHTML = e4 * f4;
+document.querySelector(".out-7").textContent = e4 * f4;
 
 // Task 8.
 // Після натискання кнопки .b-8 виконується функція, яка виводить в div.out-8 те, що користувач ввів в input.i-8. Розгляньте код і розберіть роботу скрипта
@@ -119,7 +119,8 @@ document.querySelector(".b-14").onclick = t14;
 //  Після натискання кнопки .b-15 виконується функція t15. Вона встановлює .i-15 властивість style.border = "4px solid red".
 
 function t15() {
-  document.querySelector(".b-15").insertAdjacentElement = 'style.border = "4px solid red"';
+  document.querySelector(".b-15").style.border = "4px solid red";
+  document.querySelector(".i-15").style.border = "4px solid green";
 }
 
 document.querySelector(".b-15").onclick = t15;
