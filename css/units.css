@@ -272,3 +272,12 @@ fieldset {
   align-items: center;
   gap: 1rem;
 }
+
+.result {
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  color: var(--text);
+  background-color: var(--primary-color);
+  border-left: 2px solid var(--divider-color);
+  border-radius: 0.6rem;
+}

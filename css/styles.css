@@ -95,7 +95,9 @@ div.section {
   padding: 20px 0;
 }
 .main-title {
+  padding: 0 1rem;
   color: var(--text);
+  text-align: center;
 }
 .list {
   flex-grow: 1;
