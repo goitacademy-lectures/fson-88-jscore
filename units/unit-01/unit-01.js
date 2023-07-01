@@ -35,10 +35,10 @@ document.querySelector(".output-8").innerHTML = "task-8";
 console.log(document.querySelector(".output-8"));
 
 // Task 9.
-// На сторінці створена верстка:
-// <h2>Hello <span class="out-8">everyone</span></h2>
+// На сторінці створена розмітка:
+// <h2>Hello <span class="output-8">everyone</span></h2>
 // Замініть за допомогою querySelector() текст всередині span на 'world'
-// Тобто, результат має виглядати так: <h2>Hello <span class="out-8">world</span></h2>
+// Тобто, результат має виглядати так: <h2>Hello <span class="output-8">world</span></h2>
 
 document.querySelector("h2 > .output-8").innerHTML = "world";
 console.log(document.querySelector(".output-8"));
@@ -65,7 +65,7 @@ let a = document.querySelector(".output-12");
 a.innerHTML = 3.1415;
 
 // Task 13.
-// На сторінці створено div.output-13. Отримайте його у змінну output13. За допомогою innerHTML запишіть рядок: '<img src="https://itgid.info/img/js20/js20_unit_01.png" alt="js">'
+// На сторінці створено div.output-13. Отримайте його у змінну output13. За допомогою innerHTML запишіть рядок: '<img src="https://media.giphy.com/media/7AyIKaV7uEeIw/giphy.gif" alt="Hello from mr.Bin" />'
 //  Зверніть увагу. Вам доведеться вставити рядок, який вже містить лапки. Головне щоб лапки чергувалися.  Тому при вставці оберніть цей рядок одинарними лапками. Якщо все зроблено правильно - на сторінці з'явиться картинка.
 
 const b = document.querySelector(".output-13");

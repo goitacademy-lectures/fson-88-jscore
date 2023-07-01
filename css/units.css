@@ -63,20 +63,21 @@ input[type="reset"],
 input[type="button"] {
   height: 2rem;
   padding: 0 30px;
-  color: #555;
+
   text-align: center;
   font-size: 11px;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: 0.1rem;
+  color: #555;
   text-transform: uppercase;
-  text-decoration: none;
   white-space: nowrap;
+
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid #727272;
   cursor: pointer;
-  box-sizing: border-box;
+  transition: 300ms;
 }
 .button:hover,
 button:hover,
@@ -131,6 +132,7 @@ select {
   border: 1px solid var(--secondary-text);
   border-radius: 4px;
   box-shadow: none;
+  transition: 300ms;
 }
 
 textarea {
@@ -203,6 +205,10 @@ code {
   border: 1px solid #e1e1e1;
   border-radius: 4px;
 }
+code.mb-1 {
+  display: block;
+  margin-bottom: 1rem;
+}
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
@@ -256,6 +262,7 @@ fieldset {
 .output-28,
 .output-29,
 .output-30 {
+  min-height: 52px;
   padding: 0.5rem;
   color: var(--primary-text);
   background-color: var(--light-primary-color);
@@ -267,4 +274,18 @@ fieldset {
   font-size: 32px;
   color: teal;
   text-decoration: underline;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.result {
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  color: var(--text);
+  background-color: var(--primary-color);
+  border-left: 2px solid var(--divider-color);
+  border-radius: 0.6rem;
 }
