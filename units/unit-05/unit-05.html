@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Javascript 2.0. Unit 05</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="../../css/root.css" />
+    <link rel="stylesheet" href="../../css/units.css" />
+  </head>
+
+  <body>
+    <h1>Unit 05. Масиви</h1>
+
+    <section>
+      <h4>Task 1.</h4>
+      <p>
+        Створіть масив array1, що містить рядки, числа, булеві значення. Виведіть його в .output-1.
+        Виводимо по натисканню кнопки .btn-1.
+      </p>
+
+      <button class="btn-1 button-primary">Task-1</button>
+      <div class="output-1"></div>
+    </section>
+
+    <section>
+      <h4>Task 2.</h4>
+      <p>
+        Створіть масив array2, який містить рядки, числа, булеві значення. Виведіть його в
+        div.output-2. Використовуйте шаблонний рядок для виведення з коду JS. Виводимо по натисканню
+        кнопки .btn-2.
+      </p>
+
+      <button class="btn-2 button-primary">Task-2</button>
+      <div class="output-2"></div>
+    </section>
+
+    <section>
+      <h4>Task 3.</h4>
+      <p>Створіть масив array3, заповніть його будь-якими значеннями. Виведіть довжину масиву.</p>
+
+      <button class="btn-3 button-primary">Task-3</button>
+      <div class="output-3"></div>
+    </section>
+
+    <section>
+      <h4>Task 4.</h4>
+      <p>
+        Створіть масив array4. Виведіть нульовий, третій, восьмий елемент масиву в .output-4 через
+        пробіл.
+      </p>
+
+      <button class="btn-4 button-primary">Task-4</button>
+      <div class="output-4"></div>
+    </section>
+
+    <section>
+      <h4>Task 5.</h4>
+      <p>
+        Створіть масив чисел array5 довжина якого більше 5. Виведіть суму нульового, другого та
+        третього елементів масиву
+      </p>
+
+      <button class="btn-5 button-primary">Task-5</button>
+      <div class="output-5"></div>
+    </section>
+
+    <section>
+      <h4>Task 6.</h4>
+      <p>
+        Створіть масив array6, який містить ваше ім'я, знак зодіаку, день народження та місяць
+        народження. Виведіть масив на сторінку в div.output-6. Роздільник - пробіл.
+      </p>
+
+      <button class="btn-6 button-primary">Task-6</button>
+      <div class="output-6"></div>
+    </section>
+
+    <section>
+      <h4>Task 7.</h4>
+      <p>
+        Додайте до масиву array7 значення 'vietnam' з індексом 7, 'turkey' з індексом 6, 'italy' з
+        індексом 5. Додавання елементів зробіть у fn7. Виведіть масив на сторінку в .output-7.
+        Роздільник - пробіл.
+      </p>
+
+      <button class="btn-7 button-primary">Task-7</button>
+      <div class="output-7"></div>
+    </section>
+
+    <section>
+      <h4>Task 8.</h4>
+      <p>
+        Додайте в масив array8 третій (індекс 3) елемент рівний 3.14, четвертий (індекс 4) елемент
+        рівний 17, шостий елемент (індекс 6) рівний 5. Виведіть масив в .output-8. Розділювач –
+        дефіс. У .output-8-1 виведіть довжину масиву array8.
+      </p>
+
+      <button class="btn-8 button-primary">Task-8</button>
+      <div class="output-8"></div>
+      <div class="output-8-1"></div>
+    </section>
+
+    <section>
+      <h4>Task 9.</h4>
+      <p>
+        Виведіть останній елемент масиву array9. Виведення останнього елемента – реалізуйте із
+        використанням індексу. Щоб розрахувати індекс останнього елемента – використовуйте довжину
+        масиву.
+      </p>
+
+      <button class="btn-9 button-primary">Task-9</button>
+      <div class="output-9"></div>
+    </section>
+
+    <section>
+      <h4>Task 10.</h4>
+      <p>
+        Виведіть суму першого (індекс 1) та останнього елементів масиву array10 у блок .output-10.
+        Індекс останнього елемента масиву не вказуйте безпосередньо, а обчислюйте.
+      </p>
+      <pre>array10 = [100, 200, 300, 400, 700, 121];</pre>
+
+      <button class="btn-10 button-primary">Task-10</button>
+      <div class="output-10"></div>
+    </section>
+
+    <section>
+      <h4>Task 11.</h4>
+      <p>
+        Напишіть функцію, яка змінює місцями другий (індекс 2) і четвертий (індекс 4) елементи
+        масиву array11 і виводить його в .output-11. Роздільник - пробіл.
+      </p>
+      <pre>array11 = [2, 3, 4, 5, 6, 7];</pre>
+
+      <button class="btn-11 button-primary">Task-11</button>
+      <div class="output-11"></div>
+    </section>
+
+    <section>
+      <h4>Task 12.</h4>
+      <p>
+        Напишіть функцію fn12, яка змінює місцями нульовий та останній елемент масиву array12 і
+        виводить його у .output-12. Роздільник - пробіл. Останній елемент вирахувати через довжину
+        масиву.
+      </p>
+      <pre>array12 = ['list', 'test', 'class', 'west', 'best'];</pre>
+
+      <button class="btn-12 button-primary">Task-12</button>
+      <div class="output-12"></div>
+    </section>
+
+    <section>
+      <h4>Task 13.</h4>
+      <p>Виведіть масив array13 в .output-13 у форматі індекс пробіл значення пробіл.</p>
+      <pre>array13 = ['list', 'test', 'class', 'west', 'best'];</pre>
+
+      <button class="btn-13 button-primary">Task-13</button>
+      <div class="output-13"></div>
+    </section>
+
+    <section>
+      <h4>Task 14.</h4>
+      <p>
+        Використовуючи цикл, виведіть на сторінку масив array14 у зворотному порядку. Роздільник -
+        пробіл.
+      </p>
+      <pre>array14 = [1, 2, 3, 'poly', 66];</pre>
+
+      <button class="btn-14 button-primary">Task-14</button>
+      <div class="output-14"></div>
+    </section>
+
+    <section>
+      <h4>Task 15.</h4>
+      <p>
+        Використовуючи цикл, виведіть на сторінку елементи масиву array15, які більше нуля.
+        Роздільник - пробіл.
+      </p>
+      <pre>array15 = [8, 12, 2, 5, -4, 0, 6, 22, -9,  13, 78, -12];</pre>
+
+      <button class="btn-15 button-primary">Task-15</button>
+      <div class="output-15"></div>
+    </section>
+
+    <section>
+      <h4>Task 16.</h4>
+      <p>
+        Виконайте перебір масиву array16. Парні елементи додайте в масив array16_even, непарні в
+        array16_odd. Протестуйте завдання на повторний запуск. Виведіть array16_odd у
+        div.output-16-odd, а array16_even у div.output-16-even. Роздільник - пробіл.
+      </p>
+      <pre>
+array16 = [8, 12, 2, 5, -4, 0, 6, 22, -9,  13, 78, -12];
+array16_odd = [];
+array16_even = [];
+      </pre>
+
+      <button class="btn-16 button-primary">Task-16</button>
+      <div class="output-16-even"></div>
+      <div class="output-16-odd"></div>
+    </section>
+
+    <section>
+      <h4>Task 17.</h4>
+      <p>
+        Використовуючи цикл, виведіть в .output-17 кількість елементів array17, значення яких більше
+        3. Для розрахунку використовуйте цикл і змінну лічильник.
+      </p>
+      <pre>array17 =  [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];</pre>
+      <button class="btn-17 button-primary">Task-17</button>
+      <div class="output-17"></div>
+    </section>
+
+    <section>
+      <h4>Task 18.</h4>
+      <p>Використовуючи цикл, виведіть в .output-18 значення найбільшого числа масиву array18.</p>
+      <pre>array18 = [15, 24, 13, 78, 21, 4, 45, 67];</pre>
+      <button class="btn-18 button-primary">Task-18</button>
+      <div class="output-18"></div>
+    </section>
+
+    <section>
+      <h4>Task 19.</h4>
+      <p>Виведіть у .output-19 <b>індекс</b> мінімального числа в масиві array19</p>
+      <pre>array19 = [15, 424, 313, 78, 241, 4, 45, 67]</pre>
+      <button class="btn-19 button-primary">Task-19</button>
+      <div class="output-19"></div>
+    </section>
+
+    <section>
+      <h4>Task 20.</h4>
+      <p>Виведіть у .output-20 суму елементів у масиві array20.</p>
+      <pre> array20 = [4, 5, 6, 7, 8, 9, 10];</pre>
+      <button class="btn-20 button-primary">Task-20</button>
+      <div class="output-20"></div>
+    </section>
+
+    <script src="./unit-05.js"></script>
+  </body>
+</html>
