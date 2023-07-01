@@ -1,21 +1,16 @@
 // Task 1
 // При натисканні кнопки .btn-1 спрацьовує функція fn1. Функція повинна прочитати вміст .field-1 та порівняти його з числом 4 (порівняння ==). Результат порівняння – true або false виведіть у .output-1.
 
-<<<<<<< HEAD
 function f1() {
     const a = document.querySelector(".i-1");
     document.querySelector(".out-1").innerHTML = Boolean(a.value == 4);
 }
-=======
-function fn1() {}
->>>>>>> main
 
 document.querySelector(".btn-1").onclick = fn1;
 
 // Task 2
 // Дано дві змінні a2_1 і a2_2. При натисканні кнопки .btn-2 запускається функція fn2. Функція повинна порівняти змінні за допомогою if else і вивести в .output-2 більше число. Варіант рівності змінних не розглядається.
 
-<<<<<<< HEAD
 let a21 = 1;
 let a22 = 5;
 let result;
@@ -29,12 +24,6 @@ function f2() {
 
     document.querySelector('.out-2').innerHTML = Number(result);
 }
-=======
-// let a2_1 = ;
-// let a2_2 = ;
-
-function fn2() {}
->>>>>>> main
 
 document.querySelector(".btn-2").onclick = fn2;
 
@@ -42,7 +31,6 @@ document.querySelector(".btn-2").onclick = fn2;
 // Дано два input - .field-31 і .field-32, обидва - input[type=number]. При натисканні кнопки .btn-3 спрацьовує функція fn3. Функція має порівняти числа з input, вивести в .output-3 більше число.
 // Проведіть самостійний тест роботи, введіть пари чисел 4 та 9, 9 та 22, 5 та 111.
 
-<<<<<<< HEAD
 function f3() {
     let a = document.querySelector(".i-31");
     a = Number(a.value);
@@ -58,16 +46,12 @@ function f3() {
  
   document.querySelector(".out-3").innerHTML = c;
 }
-=======
-function fn3() {}
->>>>>>> main
 
 document.querySelector(".btn-3").onclick = fn3;
 
 // Task 4.
 // Користувач вводить у .field-4 рік свого народження. Є кнопка .btn-4, яка запускає функцію fn4.Функція повинна вивести в .output-4 число 1 якщо користувачеві більше або 18 років, і 0 якщо менше.
 
-<<<<<<< HEAD
 function f4() {
     let age = document.querySelector(".i-4");
     age = Number(age.value);
@@ -77,16 +61,12 @@ function f4() {
         document.querySelector(".out-4").innerHTML = 0;
     }
 }
-=======
-function fn4() {}
->>>>>>> main
 
 document.querySelector(".btn-4").onclick = fn4;
 
 // Task 5.
 // На сторінці є input з класом .field-5, куди можна ввести число. Є кнопка .btn-5, яка запускає функцію fn5. Функція повинна вивести в .output-5 символ 'm' якщо число менше нуля, 0 якщо число дорівнює нулю і 1 якщо число більше нуля.
 
-<<<<<<< HEAD
 function f5() {
     let number = document.querySelector(".i-5");
     number = Number(number.value);
@@ -98,16 +78,12 @@ function f5() {
         document.querySelector(".out-5").innerHTML = 1;
     }
 }
-=======
-function fn5() {}
->>>>>>> main
 
 document.querySelector(".btn-5").onclick = fn5;
 
 // Task 6.
 // На сторінці є input.field-6, куди користувач може ввести число. Є кнопка .btn-6, яка запускає функцію fn6. Функція повинна вивести в .output-6 слово 'even' якщо число парне і 'odd' якщо непарне. Для перевірки парності використовується залишок від ділення на 2 (оператор %). Якщо залишок дорівнює нулю – парне, ні – непарне.
 
-<<<<<<< HEAD
 function f6() {
         let number = document.querySelector(".i-6");
     number = Number(number.value);
@@ -117,16 +93,12 @@ function f6() {
         document.querySelector(".out-6").innerHTML = "odd";
     }
 }
-=======
-function fn6() {}
->>>>>>> main
 
 document.querySelector(".btn-6").onclick = fn6;
 
 // Task 7.
 // Дано два input - .field-7-1 і .field-7-2, обидва - input[type=number]. При натисканні кнопки .btn-7 спрацьовує функція fn7. Функція повинна число з .field-7-1 піднести до ступеня .field-7-2, вивести результат у .output-7. Для піднесення до ступеня можна використовувати ** або Math.pow.
 
-<<<<<<< HEAD
 function f7() {
     let a = document.querySelector(".i-71");
     a = Number(a.value);
@@ -134,16 +106,12 @@ function f7() {
     b = Number(b.value);
     document.querySelector(".out-7").innerHTML = a ** b;
 }
-=======
-function fn7() {}
->>>>>>> main
 
 document.querySelector(".btn-7").onclick = fn7;
 
 // Task 8.
 // Дано select.select-8, який містить 3 значення: 1, 2, 3. Дана кнопка btn-8. При натисканні спрацьовує функція fn8. Функція повинна отримати обране в select число, потім за допомогою switch case порівняти його по черзі з 1, 2, 3. І якщо вибране число - 1, то вивести в .output-8 рядок 'one', якщо 2 - 'two', якщо 3 - 'three'.
 
-<<<<<<< HEAD
 function f8() {
     let a = document.querySelector(".s-8");
     a = Number(a.value);
@@ -159,9 +127,6 @@ function f8() {
             break;
     }
 }
-=======
-function fn8() {}
->>>>>>> main
 
 document.querySelector(".btn-8").onclick = fn8;
 
@@ -172,7 +137,6 @@ document.querySelector(".btn-8").onclick = fn8;
 //  якщо від 44 (включно) до 64 (включно) – то 3
 //  інакше вивести 0
 
-<<<<<<< HEAD
 function f9() {
     let n = document.querySelector(".i-9");
     n = Number(n.value);
@@ -186,9 +150,6 @@ function f9() {
         document.querySelector(".out-9").innerHTML = 0;
     }
 }
-=======
-function fn9() {}
->>>>>>> main
 
 document.querySelector(".btn-9").onclick = fn9;
 
@@ -218,16 +179,12 @@ document.querySelector(".select-110").onchange = f11;
 
 ////Під питанням !!!!!!!!!
 
-<<<<<<< HEAD
 function f12() {
     let input = document.querySelector(".i-120");
     let b = input.value;
     document.querySelector(".out-12").innerHTML = typeof b;
 }
 document.querySelector(".b-12").onclick = f12;
-=======
-document.querySelector(".btn-12").onclick = f12;
->>>>>>> main
 
     
 /// Теж не дуже зрозуміло !!!!!!
