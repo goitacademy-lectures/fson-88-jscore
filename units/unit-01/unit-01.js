@@ -1,6 +1,38 @@
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getAllPropValues(propName) {
+  // Change code below this line
+  let arr = [];
+for (const product of products)
+  if (propName === "name") {
+  arr.push(product.name)
+  };
+return arr;
+  for (const product of products)
+   if (propName === 'price') {
+  arr.push(product.price)
+  };
+return arr;
+  for (const product of products)
+   if (propName === 'quantity') {
+  arr.push(product.quantity)
+  };
+return arr;
+    return [];
+    
+    
+  // Change code above this line
+}
 // Task 1.
 // Виведіть у консоль ваше ім'я. Нагадування – під час роботи, консоль відкрита завжди!
 // console.log();
+
+// Change code above this line
 
 // Task 2.
 //  Виведіть у консоль номер місяця, в якому Ви народилися. Вивчіть чим відрізняється виведення числа та рядка.
