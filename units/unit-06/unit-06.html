@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Javascript 2.0. Unit 06</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="../../css/root.css" />
+    <link rel="stylesheet" href="../../css/units.css" />
+  </head>
+
+  <body>
+    <h1>Unit 06. Функції</h1>
+
+    <section>
+      <h4>Task 1.</h4>
+      <p>
+        Напишіть функцію <code>fn1</code>, яка при натисканні кнопки виводить у
+        <code>.output-1</code> змінну <code>number1</code>.
+      </p>
+      <pre>
+      let number1 = 15;
+      function fn1() {
+      }
+      document.querySelector('.btn-1').onclick = fn1;
+      </pre>
+      <button class="btn-1 button-primary">Task-1</button>
+      <div class="output-1"></div>
+    </section>
+
+    <section>
+      <h4>Task 2.</h4>
+      <p>
+        Покращимо код із Task 1. Зараз функція лише виводить змінну в заданий блок. Давайте зробимо
+        так, щоб функція була більш гнучкою. Нехай тепер функція <code>fn2</code> повертає
+        <code>(return)</code> змінну <code>number2</code>. Оскільки функція повертає змінну, то ім'я
+        функції із дужками (виклик функції) можна вбудовувати у вирази. Зверніть увагу, як тепер
+        змінюється виклик функції.
+      </p>
+      <pre>
+      let number2 = 15;
+      function fn2() {
+        // код пишемо тут
+      }
+      document.querySelector('.btn-2').onclick = function() {
+        document.querySelector('.output-2').textContent = f2();
+      }
+      </pre>
+      <button class="btn-2 button-primary">Task-2</button>
+      <div class="output-2"></div>
+    </section>
+
+    <section>
+      <h4>Task 3.</h4>
+      <p>
+        Наша попередня функція, все ще сильно залежна від зовнішніх змінних. Давайте зробимо її
+        універсальнішою. Нехай функція <code>fn3</code> приймає 2 аргументи та повертає їх добуток.
+        Допишіть код функції так, щоб вона повертала добуток двох чисел, переданих їй як аргументи
+        <code>a, b</code>. Протестуємо функцію на двох прикладах, за допомогою кнопок
+        <code>.btn-3-1</code> та <code>.btn-3-2</code>.
+      </p>
+      <pre>
+      function fn3(a, b) {
+
+      }
+      document.querySelector('.btn-3-1').onclick = function(){
+        const output = document.querySelector('.output-3-1')
+        output.textContent = fn3(4, 4);
+      }
+      document.querySelector('.btn-3-2').onclick = function(){
+        const output = document.querySelector('.output-3-2')
+        output.textContent = fn3(7, 8);
+      }
+      </pre>
+      <button class="btn-3-1 button-primary">button 3-1</button>
+      <button class="btn-3-2 button-primary">button 3-2</button>
+      <div class="output-3-1"></div>
+      <div class="output-3-2"></div>
+    </section>
+
+    <section>
+      <h4>Task 4.</h4>
+      <p>
+        Напишіть функцію <code>fn4</code>, яка приймає ваш рік народження і обчислює (повертає) ваш
+        вік. Використайте конструктор <code>new Date()</code> і його метод
+        <code>getFullYear()</code>
+      </p>
+      <button class="btn-4 button-primary">Task-4</button>
+      <div class="output-4"></div>
+    </section>
+
+    <section>
+      <h4>Task 5.</h4>
+      <p>
+        Напишіть функцію <code>fn5</code>, яка приймає ваше ім'я як параметр і повертає число
+        символів у ньому, де <code>name</code> - це ім'я прийняте як параметр. Довжину (число
+        символів) можна порахувати за допомогою властивості <code>length</code>.
+      </p>
+      <button class="btn-5 button-primary">Task-5</button>
+      <div class="output-5"></div>
+    </section>
+
+    <section>
+      <h4>Task 6.</h4>
+      <p>
+        Напишіть функцію <code>fn6</code>, яка приймає 2 числа і повертає випадкове ціле число від
+        першого до другого прийнятого параметра. Це перше завдання, вирішення якого потрібно знайти
+        в Google.
+      </p>
+      <button class="btn-6 button-primary">Task-6</button>
+      <div class="output-6"></div>
+    </section>
+
+    <section>
+      <h4>Task 7.</h4>
+      <p>
+        Напишіть функцію <code>fn7</code>, яка повертає випадковий колір у форматі
+        <code> rgb(x, y, z) </code>(рядок). Де <code>x, y, z</code> – випадкові числа в діапазоні
+        [0, 255].
+      </p>
+      <button class="btn-7 button-primary">Task-7</button>
+      <div class="output-7">Цей блок змінить колір</div>
+    </section>
+
+    <section>
+      <h4>Task 8.</h4>
+      <p>
+        Напишіть функцію <code>fn8</code>, яка приймає рядок як параметр і повертає результат з
+        очищеними пробілами на початку та в кінці рядка. Рядок, який приймає функція
+        <code>&nbsp;&nbsp;&nbsp;JavaScriptIsMyJam&nbsp;&nbsp;&nbsp;</code>, а повертає санітізований
+        рядок <code>JavaScriptIsMyJam</code>. Для видалення пробілів використайте метод
+        <code>trim()</code>.
+      </p>
+      <button class="btn-8 button-primary">Task-8</button>
+      <div class="output-8">У цьому завданні результат виводимо у консоль</div>
+    </section>
+
+    <section>
+      <h4>Task 9.</h4>
+      <p>
+        Напишіть функцію <code>fn9</code>, яка приймає число та повертає <code>true</code>, якщо
+        число парне, і <code>false</code> якщо не парне.
+      </p>
+      <button class="btn-9 button-primary">Task-9</button>
+      <div class="output-9"></div>
+    </section>
+
+    <section>
+      <h4>Task 10.</h4>
+      <p>
+        Створіть функцію <code>fn10</code>, яка приймає 2 числа і повертає більше з них. У разі
+        рівності - перше.
+      </p>
+      <button class="btn-10 button-primary">Task-10</button>
+      <div class="output-10"></div>
+    </section>
+
+    <script src="./unit-06.js"></script>
+  </body>
+</html>

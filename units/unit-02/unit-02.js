@@ -4,6 +4,7 @@ const a = 7;
 const b = 9;
 console.log(a * b);
 // Task 2.
+<<<<<<< HEAD
 // Створіть дві змінні c = 7 та d = 9. Виведіть на сторінку в .out-2 результат ділення c на d.
 const c = 7;
 const d = 9;
@@ -33,67 +34,107 @@ document.querySelector(".out-6").innerHTML = 8 + e3 + f3;
 const e4 = 3;
 const f4 = 'Hello';
 document.querySelector(".out-7").innerHTML = e4 * f4;
-// Task 8.
-// Після натискання кнопки .b-8 виконується функція, яка виводить в div.out-8 те, що користувач ввів в input.i-8. Розгляньте код і розберіть роботу скрипта
+=======
+// Створіть дві змінні c = 7 та d = 9. Виведіть на сторінку в .output-2 результат ділення c на d.
 
-function t8() {
+// Task 3.
+//  Створіть дві змінні e = 3 та f = 5. Виведіть на сторінку в .output-3 результат додавання e + f.
+
+// Task 4.
+//  Створіть дві змінні e1 = '3' і f1 = 5. Виведіть на сторінку в .output-4 результат додавання e1 + f1. Поясніть відмінність від попереднього результату.
+
+// Task 5.
+//  Створіть дві змінні e2 = 3 і f2 = 0. Виведіть на сторінку в .output-5 результат ділення e2 на f2.
+
+// Task 6.
+//  Створіть дві змінні e3 = 3 та f3 = 'Hello'. Виведіть на сторінку в .output-6 результат додавання двох змінних.
+
+// Task 7.
+//  Створіть дві змінні e4 = 3 та f4 = 'Hello'. Виведіть на сторінку в .output-7 результат множення двох змінних.
+
+>>>>>>> main
+// Task 8.
+// Після натискання кнопки .btn-8 виконується функція fn8, яка виводить в div.output-8 те, що користувач ввів в input.field-8. Розгляньте код і розберіть роботу скрипта
+
+function fn8() {
   // значення value завжди отримуємо всередині функції
+<<<<<<< HEAD
   const data = document.querySelector(".i-8").value;
   console.log(data); // отримали значення
+=======
+  const data = document.querySelector(".field-8").value; // отримали значення
+>>>>>>> main
   // нижче виводимо значення на сторінку
-  document.querySelector(".out-8").innerHTML = data;
+  document.querySelector(".output-8").innerHTML = data;
 }
 
-document.querySelector(".b-8").onclick = t8;
+document.querySelector(".btn-8").onclick = fn8;
 
 // Task 9.
-// Після натискання кнопки .b-9 виконується функція t9, яка виводить в div.out-9 те, що користувач ввів в input.i-9. Додайте очищення input після натискання кнопки.
+// Після натискання кнопки .btn-9 виконується функція fn9, яка виводить в div.output-9 те, що користувач ввів в input.field-9. Додайте очищення input після натискання кнопки.
 
+<<<<<<< HEAD
 function t9() {
   const element = document.querySelector(".i-9");
   document.querySelector(".out-9").innerHTML = element.value;
   element.value = "";
 }
+=======
+function fn9() {}
+>>>>>>> main
 
-document.querySelector(".b-9").onclick = t9;
+document.querySelector(".btn-9").onclick = fn9;
 
 // Task 10.
-// Після натискання на кнопку .b-10 виконується функція t10, яка виводить у div.out-10 те, що користувач ввів в input.i-10 помножене на 20.
+// Після натискання на кнопку .btn-10 виконується функція fn10, яка виводить у div.output-10 те, що користувач ввів в input.field-10 помножене на 20.
 
+<<<<<<< HEAD
 function t10() {
   const element = document.querySelector(".i-10");
   console.log(element.value);
   document.querySelector(".out-10").innerHTML = Number(element.value * 20);
 }
+=======
+function fn10() {}
+>>>>>>> main
 
-document.querySelector(".b-10").onclick = t10;
+document.querySelector(".btn-10").onclick = fn10;
 
 // Task 11.
-// За натисканням на кнопку .b-11 виконується функція t11, яка виводить на сторінку в .out-11 число, яке ввів користувач в i-11 і до нього додане число 55. У цій задачі ми не приводимо до числа значення отримане з input.
+// Після натискання на кнопку .btn-11 виконується функція fn11, яка виводить на сторінку в .output-11 число, яке ввів користувач в .field-11 і до нього додане число 55. У цій задачі ми не приводимо до числа значення отримане з input.
 
+<<<<<<< HEAD
 function t11() {
 
   document.querySelector(".out-11").innerHTML = element.value + 55;
 }
+=======
+function fn11() {}
+>>>>>>> main
 
-document.querySelector(".b-11").onclick = t11;
+document.querySelector(".btn-11").onclick = fn11;
 
 // Task 12.
-// Після натискання на кнопку виконується функція t12. Функція повинна отримати дані з input i.12-1 та i.12-2 (користувач вводить в них прізвище та ім'я). Після чого вивести в .out-12 рядок 'Hello ім'я прізвище', де ім'я - це ім'я користувача, а прізвище - це введене прізвище.
+// Після натискання на кнопку виконується функція fn12. Функція повинна отримати дані з input.field-12-1 та .field-12-2 (користувач вводить в них прізвище та ім'я). Після чого вивести в .output-12 рядок 'Hello ім'я прізвище', де ім'я - це ім'я користувача, а прізвище - це введене прізвище.
 // Звертаємо увагу на те, що ми працюємо у відповідності до завданням.Hello - з великої літери. Між Hello ім'я один пробіл
 
+<<<<<<< HEAD
 function t12() {
   const one = document.querySelector(".i-12-1");
   const two = document.querySelector(".i-12-2");
 
   document.querySelector(".out-12").innerHTML = `'Hello ${one.value} ${two.value}'`;
 }
+=======
+function fn12() {}
+>>>>>>> main
 
-document.querySelector(".b-12").onclick = t12;
+document.querySelector(".btn-12").onclick = fn12;
 
 // Task 13.
-// При натисканні кнопки .b-13 виконується t13. Функція отримує з input.i-13-1 і .i-13-2 числа змінні a, b. Після чого в .out-13 виводить їхню суму. Потрібно перетворити змінні a, b у числа!
+// При натисканні кнопки .btn-13 виконується функція fn13. Функція отримує з input.field-13-1 та input.field-13-2 числа в змінні a та b. Після чого в .output-13 виводить їхню суму. Потрібно перетворити змінні a та b у числа!
 
+<<<<<<< HEAD
 function t13() {
   const a = document.querySelector(".i-13-1");
   console.log(a);
@@ -101,82 +142,111 @@ function t13() {
   console.log(b);
   document.querySelector(".out-13").innerHTML = Number(a.value) + Number(b.value);
 }
+=======
+function fn13() {}
+>>>>>>> main
 
-document.querySelector(".b-13").onclick = t13;
+document.querySelector(".btn-13").onclick = fn13;
 
 // Task 14.
-// Після натискання кнопки .b-14 виконується функція t14. Вона замінює значення value input.i-14 на рядок 'Go'
+// Після натискання кнопки .btn-14 виконується функція fn14. Вона замінює значення value input.field-14 на рядок 'Go'
 
+<<<<<<< HEAD
 function t14() {
   const a = document.querySelector(".i-14");
   a.value = "Go";
 }
+=======
+function fn14() {}
+>>>>>>> main
 
-document.querySelector(".b-14").onclick = t14;
+document.querySelector(".btn-14").onclick = fn14;
 
 // Task 15.
-//  Після натискання кнопки .b-15 виконується функція t15. Вона встановлює .i-15 властивість style.border = "4px solid red".
+//  Після натискання кнопки .btn-15 виконується функція fn15. Вона встановлює для input.field-15 властивість style.border = "4px solid red".
 
+<<<<<<< HEAD
 function t15() {
 document.querySelector(".i-15").style.border = "4px solid red";
 
 }
+=======
+function fn15() {}
+>>>>>>> main
 
-document.querySelector(".b-15").onclick = t15;
+document.querySelector(".btn-15").onclick = fn15;
 
 // Task 16.
-// Після натискання кнопки .b-16 виконується функція t16. Функція отримує з .i-16-1 та i-16-2 числа. Виведіть у .out-16 суму даних чисел по натисканню кнопки b-16. Не переводимо отримані значення з input у число!
+// Після натискання кнопки .btn-16 виконується функція fn16. Функція отримує з .field-16-1 та field-16-2 числа. Виведіть у .output-16 суму даних чисел по натисканню кнопки .btn-16. Не переводимо отримані значення з input у число!
 
+<<<<<<< HEAD
 function t16() {
   const a = document.querySelector(".i-16-1");
   const b = document.querySelector(".i-16-2");
   document.querySelector(".out-16").innerHTML = a.value + b.value;
 }
+=======
+function fn16() {}
+>>>>>>> main
 
-document.querySelector(".b-16").onclick = t16;
+document.querySelector(".btn-16").onclick = fn16;
 
 // Task 17.
-// Після натискання кнопки .b-17 виконується функція t17. Функція отримує з .i-17 число. Вивчіть роботу коду та запам'ятайте відмінності. Спробуйте ввести цифри 5, 4zz, zz4, -200, 33.05
+// Після натискання кнопки .btn-17 виконується функція fn17. Функція отримує з .field-17 число. Вивчіть роботу коду та запам'ятайте відмінності. Спробуйте ввести цифри 5, 4zz, zz4, -200, 33.05
 
-function t17() {
-  let a = document.querySelector(".i-17").value;
-  document.querySelector(".out-17-1").innerHTML = +a;
-  document.querySelector(".out-17-2").innerHTML = parseInt(a, 10);
-  document.querySelector(".out-17-3").innerHTML = Number(a);
+function fn17() {
+  let a = document.querySelector(".field-17").value;
+  document.querySelector(".output-17-1").innerHTML = +a;
+  document.querySelector(".output-17-2").innerHTML = parseInt(a, 10);
+  document.querySelector(".output-17-3").innerHTML = Number(a);
 }
 
-document.querySelector(".b-17").onclick = t17;
+document.querySelector(".btn-17").onclick = fn17;
 
 // Task 18.
-// Після натискання кнопки .b-18 виконується функція t18. Функція отримує з .i-18 число, яку потірбно присвоїти у змінну a. Виводить в out-18 результат операції parseFloat(a). Спробуйте ввести значення 5, 33.02, 33.9a, -20.01
+// Після натискання кнопки .btn-18 виконується функція fn18. Функція отримує з .field-18 число, яку потірбно присвоїти у змінну a. Виводить в output-18 результат операції parseFloat(a). Спробуйте ввести значення 5, 33.02, 33.9a, -20.01
 
+<<<<<<< HEAD
 function t18() {
   let a = document.querySelector('.i-18');
   document.querySelector(".out-18").innerHTML = Number.parseFloat(a.value);
 }
+=======
+function fn18() {}
+>>>>>>> main
 
-document.querySelector(".b-18").onclick = t18;
+document.querySelector(".btn-18").onclick = fn18;
 
 // Task 19.
-// Після натискання кнопки .b19 функція t19 повинна в out-19 вивести суму двох відʼємних чисел із input .i-19-1 та .i-19-2.
+// Після натискання кнопки .btn-19 функція fn19 повинна в .output-19 вивести суму двох відʼємних чисел із input.field-19-1 та input.field-19-2.
 
+<<<<<<< HEAD
 function t19() {
     const a = document.querySelector(".i-19-1");
   const b = document.querySelector(".i-19-2");
   document.querySelector(".out-19").innerHTML = Number(a.value) + Number(b.value);
 }
+=======
+function fn19() {}
+>>>>>>> main
 
-document.querySelector(".b-19").onclick = t19;
+document.querySelector(".btn-19").onclick = fn19;
 
 // Task 20
-//  При натисканні на кнопку .b-20 у out-20 виводиться число - скільки разів була натиснута кнопка .b-20.
+//  При натисканні на кнопку .btn-20 у .output-20 виводиться число - скільки разів була натиснута кнопка .btn-20.
 
 let count = 0;
 
+<<<<<<< HEAD
 function t20() {
   count += 1;
   document.querySelector(".out-20").innerHTML = count;
   // нижче додати вівід в out-20
+=======
+function fn20() {
+  // порахувати нове значення для count
+  // нижче додати вивід в .output-20
+>>>>>>> main
 }
 
-document.querySelector(".b-20").onclick = t20;
+document.querySelector(".btn-20").onclick = fn20;
