@@ -112,7 +112,18 @@ document.querySelector(".btn-5").onclick = fn5;
 // 10x01x
 // 10x01x
 
-function fn6() {}
+function fn6() {
+  let result = [];
+  for (let i = 1; i < 4; i += 1) {
+    for (let k = 0; k < 7; k += 1) {
+      if (k === 1 || k === 5) result += 1;
+      if (k === 2 || k === 4) result += 0;
+      if (k === 3 || k === 6) result += "x";
+    }
+    result += "<br>";
+  }
+  document.querySelector(".output-6").innerHTML = result;
+}
 
 document.querySelector(".btn-6").onclick = fn6;
 
@@ -123,7 +134,16 @@ document.querySelector(".btn-6").onclick = fn6;
 // ***
 // ****
 
-function fn7() {}
+function fn7() {
+  let result = [];
+  for (let i = 1; i < 5; i += 1) {
+    for (let k = 1; k <= i; k += 1) {
+      result += "*";
+    }
+    result += "<br>";
+  }
+  document.querySelector(".output-7").innerHTML = result;
+}
 
 document.querySelector(".btn-7").onclick = fn7;
 
@@ -135,7 +155,16 @@ document.querySelector(".btn-7").onclick = fn7;
 // **
 // *
 
-function fn8() {}
+function fn8() {
+  let result = [];
+  for (let i = 1; i < 5; i += 1) {
+    for (let k = 1; k < 6; k += i) {
+      result += "*";
+    }
+    result += "<br>";
+  }
+  document.querySelector(".output-8").innerHTML = result;
+}
 
 document.querySelector(".btn-8").onclick = fn8;
 
