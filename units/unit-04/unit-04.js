@@ -157,8 +157,8 @@ document.querySelector(".btn-7").onclick = fn7;
 
 function fn8() {
   let result = [];
-  for (let i = 1; i < 5; i += 1) {
-    for (let k = 1; k < 6; k += i) {
+  for (let i = 1; i < 6; i += 1) {
+    for (let k = 6; k > i; k -= 1) {
       result += "*";
     }
     result += "<br>";
@@ -176,7 +176,16 @@ document.querySelector(".btn-8").onclick = fn8;
 // 1_2_3_4_
 // 1_2_3_4_5_
 
-function fn9() {}
+function fn9() {
+  let result = "";
+  for (let i = 1; i < 6; i += 1) {
+    for (let k = 1; k <= i; k += 1) {
+      result += `${k}_`;
+    }
+    result += "<br>";
+  }
+  document.querySelector(".output-9").innerHTML = result;
+}
 
 document.querySelector(".btn-9").onclick = fn9;
 
@@ -188,6 +197,15 @@ document.querySelector(".btn-9").onclick = fn9;
 //31_32_33_34_35_36_37_38_39_40_
 //41_42_43_44_45_46_47_48_49_50_
 
-function fn10() {}
+function fn10() {
+  let result = "";
+  for (let i = 0; i < 5; i += 1) {
+    for (let k = 1; k < 11; k += 1) {
+      result += `${i * 10 + k}_`.padStart(3, 0);
+    }
+    result += "<br>";
+  }
+  document.querySelector(".output-10").innerHTML = result;
+}
 
 document.querySelector(".btn-10").onclick = fn10;
