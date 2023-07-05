@@ -1,11 +1,10 @@
 // Task 1
 //  Створіть масив array1, що містить рядки, числа, булеві значення. Виведіть його в .output-1. Виводимо по натисканню кнопки .btn-1.
 // змінну оголошуємо тут
-const array1 = []; // ініціалізація літерала масива
-const out_1 = document.querySelector(".out-1");
-
+const array1 = ["Haber", 10, true];
+const out_1 = document.querySelector(".output-1");
 function fn1() {
-  out_1.innerHTML = array1; // будемо виводити таким способом
+  out_1.innerHTML = array1;
 }
 
 document.querySelector(".btn-1").onclick = fn1;
@@ -14,9 +13,10 @@ document.querySelector(".btn-1").onclick = fn1;
 // Створіть масив array2, який містить рядки, числа, булеві значення. Виведіть його в div.output-2. Використовуйте шаблонний рядок для виведення з коду JS. Виводимо по натисканню кнопки .btn-2.
 
 // змінну оголошуємо тут
-
-function fn2() {}
-
+const array2 = ["Haber", 10, true];
+function fn2() {
+  document.querySelector(".output-2").innerHTML = `${array2}`;
+}
 document.querySelector(".btn-2").onclick = fn2;
 
 // Task 3
@@ -25,8 +25,10 @@ document.querySelector(".btn-2").onclick = fn2;
 // Виводимо в .output-3
 
 // змінну оголошуємо тут
-
-function fn3() {}
+const array3 = [1, 2, 3, 54, 213, 31, 12, 903];
+function fn3() {
+  document.querySelector(".output-3").innerHTML = array3.length;
+}
 
 document.querySelector(".btn-3").onclick = fn3;
 
@@ -34,22 +36,29 @@ document.querySelector(".btn-3").onclick = fn3;
 //  Створіть масив array4. Виведіть нульовий, третій, восьмий елемент масиву в .output-4 через пробіл.
 
 // змінну оголошуємо тут
-
-function fn4() {}
+const array4 = [1, 2, 3, 54, 213, 332, 12, 903];
+function fn4() {
+  let result = `${array4[0]}, ${array4[2]}, ${array4[7]}`;
+  document.querySelector(".output-4").innerHTML = result;
+}
 
 document.querySelector(".btn-4").onclick = fn4;
 
 // Task 5
 //  Створіть масив чисел array5 довжина якого більше 5. Виведіть суму нульового, другого та третього елементів масиву
-
-function fn5() {}
-
+const array5 = [1, 2, 3, 54, 213, 332, 12, 903];
+function fn5() {
+  let result = array5[0] + array5[1] + array5[2];
+  document.querySelector(".output-5").innerHTML = result;
+}
 document.querySelector(".btn-5").onclick = fn5;
 
 // Task 6
 //  Створіть масив array6, який містить ваше ім'я, знак зодіаку, день народження та місяць народження. Виведіть масив на сторінку в div.output-6. Роздільник - пробіл.
-
-function fn6() {}
+const array6 = ["Serhii", "Oven", 14, 4];
+function fn6() {
+  document.querySelector(".output-6").innerHTML = array6.join(" ");
+}
 
 document.querySelector(".btn-6").onclick = fn6;
 
@@ -58,7 +67,12 @@ document.querySelector(".btn-6").onclick = fn6;
 
 const array7 = ["china", "india", "brazil", "japan", "egypt"];
 
-function fn7() {}
+function fn7() {
+  array7[7] = "vietnam";
+  array7[6] = "turkey";
+  array7[5] = "italy";
+  document.querySelector(".output-7").innerHTML = array7.join(", ");
+}
 
 document.querySelector(".btn-7").onclick = fn7;
 
