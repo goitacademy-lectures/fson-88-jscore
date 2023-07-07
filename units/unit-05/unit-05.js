@@ -79,13 +79,24 @@ document.querySelector(".btn-7").onclick = fn7;
 // Task 8
 // Додайте в масив array8 третій (індекс 3) елемент рівний 3.14, четвертий (індекс 4) елемент рівний 17, шостий елемент (індекс 6) рівний 5. Виведіть масив в .output-8. Розділювач – дефіс. У .output-8-1 виведіть довжину масиву array8.
 
-const array8 = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+const array8 = [];
 
 function fn8() {
-  array8.splice(3, 0, Number(3.14));
-  array8.splice(4, 0, 17);
-  array8.splice(6, 0, 5);
-  document.querySelector("output-8").innerHTML = array8.join("-");
+  const output = document.querySelector(".output-8");
+  const outputputLength = document.querySelector(".output-8-1");
+
+  array8[3] = 3.14;
+  array8[4] = 17;
+  array8[6] = 5;
+
+  let markup = "";
+
+  for (let index = 0; index < array8.length; index += 1) {
+    markup += `${array8[index]}-`;
+  }
+
+  output.innerHTML = markup;
+  outputputLength.innerHTML = array8.length;
 }
 
 document.querySelector(".btn-8").onclick = fn8;
@@ -106,7 +117,10 @@ document.querySelector(".btn-9").onclick = fn9;
 
 const array10 = [100, 200, 300, 400, 700, 121];
 
-function fn10() {}
+function fn10() {
+  let result = array10[0] + array10[array10.length - 1];
+  document.querySelector(".output-10").innerHTML = result;
+}
 
 document.querySelector(".btn-10").onclick = fn10;
 
