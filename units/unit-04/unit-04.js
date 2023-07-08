@@ -7,7 +7,7 @@
 function fn1() {
     const element = document.querySelector(".output-1");
     let string = "";
-    for (let i = 0; i < 1; i += 1) {
+    for (let i = 0; i < 3; i += 1) {
         for (let k = 0; k < 3; k += 1) {
             string += "*";
         }
@@ -99,9 +99,9 @@ function fn5() {
     for (let i = 0; i < 3; i += 1) {
         for (let k = 0; k < 6; k += 1) {
             if (k % 2 === 0) {
-                string += 0;
-            } else {
                 string += 1;
+            } else {
+                string += 0;
             }
         }
         string += "<br>"

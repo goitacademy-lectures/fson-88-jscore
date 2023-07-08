@@ -46,7 +46,8 @@ function fn4() {
   console.log(array4[0]);
   console.log(array4[2]);
   console.log(array4[7]);
-
+  let res = `${array4[0]} + ${array4[2]} + ${array4[7]}`;
+ out_4.innerHTML = res;
 }
 
 document.querySelector(".btn-4").onclick = fn4;
@@ -65,7 +66,7 @@ document.querySelector(".btn-5").onclick = fn5;
 
 // Task 6
 //  Створіть масив array6, який містить ваше ім'я, знак зодіаку, день народження та місяць народження. Виведіть масив на сторінку в div.output-6. Роздільник - пробіл.
-const array6 = ['Kira','Oven', 4, 4];
+const array6 = ['Kira','Aries', 4, 4];
 const out_6 = document.querySelector(".output-6");
 
 function fn6() {
