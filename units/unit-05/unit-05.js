@@ -102,8 +102,15 @@ document.querySelector(".btn-7").onclick = fn7;
 // Додайте в масив array8 третій (індекс 3) елемент рівний 3.14, четвертий (індекс 4) елемент рівний 17, шостий елемент (індекс 6) рівний 5. Виведіть масив в .output-8. Розділювач – дефіс. У .output-8-1 виведіть довжину масиву array8.
 
 const array8 = [];
+const out_8 = document.querySelector(".output-8-1");
 
-function fn8() {}
+function fn8() {
+  array8[3] = 3.14;
+  array8[4] = 17;
+  array8[6] = 5;
+
+  out_8.innerHTML = array8.join('-').length;
+}
 
 document.querySelector(".btn-8").onclick = fn8;
 
@@ -111,8 +118,11 @@ document.querySelector(".btn-8").onclick = fn8;
 // Виведіть останній елемент масиву array9. Виведення останнього елемента – реалізуйте із використанням індексу. Щоб розрахувати індекс останнього елемента – використовуйте довжину імасиву.
 
 const array9 = [100, 200, 300, 400, 700, 121];
+const out_9 = document.querySelector(".output-9");
 
-function fn9() {}
+function fn9() {
+out_9.innerHTML = array9[array9.length-1];
+}
 
 document.querySelector(".btn-9").onclick = fn9;
 
@@ -120,8 +130,11 @@ document.querySelector(".btn-9").onclick = fn9;
 // Виведіть суму першого (індекс 1) та останнього елементів масиву array10 у блок .output-10. Індекс останнього елемента масиву не вказуйте безпосередньо, а обчислюйте.
 
 const array10 = [100, 200, 300, 400, 700, 121];
+const out_10 = document.querySelector(".output-10");
 
-function fn10() {}
+function fn10() {
+out_10.innerHTML = array10[0] + array10[array10.length-1];
+}
 
 document.querySelector(".btn-10").onclick = fn10;
 
@@ -129,8 +142,13 @@ document.querySelector(".btn-10").onclick = fn10;
 // Напишіть функцію, яка змінює місцями другий (індекс 2) і четвертий (індекс 4) елементи масиву array11 і виводить його в .output-11. Роздільник - пробіл.
 
 const array11 = [2, 3, 4, 5, 6, 7];
+const out_11 = document.querySelector(".output-11");
 
-function fn11() {}
+function fn11() {
+  array11[1] = array11[3];
+  
+out_11.innerHTML = array11.join(" ");
+}
 
 document.querySelector(".btn-11").onclick = fn11;
 
@@ -138,17 +156,25 @@ document.querySelector(".btn-11").onclick = fn11;
 // Напишіть функцію fn12, яка змінює місцями нульовий та останній елемент масиву array12 і виводить його у .output-12. Роздільник - пробіл. Останній елемент вирахувати через довжину масиву.
 
 const array12 = ["list", "test", "class", "west", "best"];
+const out_12 = document.querySelector(".output-12");
 
-function fn12() {}
+function fn12() {
+  array12[0] = array12[array12.length - 1];
+  
+out_12.innerHTML = array12.join(" ");
+}
 
 document.querySelector(".btn-12").onclick = fn12;
 
-// Task 13
+// Task 13 
 // Виведіть масив array13 в .output-13 у форматі індекс пробіл значення пробіл.
 
 const array13 = ["list", "test", "class", "west", "best"];
+const out_13 = document.querySelector(".output-13");
 
-function fn13() {}
+function fn13() {
+
+}
 
 document.querySelector(".btn-13").onclick = fn13;
 
