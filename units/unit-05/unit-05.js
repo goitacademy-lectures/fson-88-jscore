@@ -170,11 +170,20 @@ document.querySelector(".btn-12").onclick = fn12;
 // Виведіть масив array13 в .output-13 у форматі індекс пробіл значення пробіл.
 
 const array13 = ["list", "test", "class", "west", "best"];
-const out_13 = document.querySelector(".output-13");
+
 
 function fn13() {
+  const output = document.querySelector(".output-13");
+  let markup = "";
 
+  for (let i = 0; i < array13.length; i += 1) {
+    const element = array13[i];
+
+    markup += `${i} ${element} `;
+  }
+   output.innerHTML = markup;
 }
+
 
 document.querySelector(".btn-13").onclick = fn13;
 
@@ -182,17 +191,32 @@ document.querySelector(".btn-13").onclick = fn13;
 //  Використовуючи цикл, виведіть на сторінку масив array14 у зворотному порядку. Роздільник - пробіл.
 
 const array14 = [1, 2, 3, "poly", 66];
+const out_14 = document.querySelector(".output-14");
 
-function fn14() {}
+function fn14() {
+  
+  out_14.innerHTML = array14.reverse().join(" ");
+}
 
 document.querySelector(".btn-14").onclick = fn14;
 
-// Task 15
+// Task 15 ..((
 // Використовуючи цикл, виведіть на сторінку елементи масиву array15, які більше нуля. Роздільник - пробіл.
 
 const array15 = [8, 12, 2, 5, -4, 0, 6, 22, -9, 13, 78, -12];
 
-function fn15() {}
+
+function fn15() {
+  const output = document.querySelector(".output-15");
+  let markup = "";
+
+  for (const item of array15) {
+    if (item > 0) {
+      markup += `${item} `;
+    }
+  }
+    output.innerHTML = markup;
+}
 
 document.querySelector(".btn-15").onclick = fn15;
 
@@ -203,7 +227,29 @@ const array16 = [8, 12, 2, 5, -4, 0, 6, 22, -9, 13, 78, -12];
 const array16_odd = [];
 const array16_even = [];
 
-function fn16() {}
+  
+function fn16() {
+ const outputEven = document.querySelector(".output-16-even");
+  const outputOdd = document.querySelector(".output-16-odd");
+
+  if (array16_odd.length !== 0 && array16_even.length !== 0) {
+    return;
+  }
+
+  for (let i = 0; i < array16.length; i += 1) {
+    const currentNumber = array16[i];
+
+    if (currentNumber % 2 === 0) {
+      array16_even.push(currentNumber);
+    } else {
+      array16_odd.push(currentNumber);
+    }
+  }
+
+  outputEven.innerHTML = array16_even.join(" ");
+  outputOdd.innerHTML = array16_odd.join(" ");
+  }
+
 
 document.querySelector(".btn-16").onclick = fn16;
 
@@ -211,8 +257,18 @@ document.querySelector(".btn-16").onclick = fn16;
 // Використовуючи цикл, виведіть в .output-17 кількість елементів array17, значення яких більше 3. Для розрахунку використовуйте цикл і змінну лічильник.
 
 const array17 = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
+const out_17 = document.querySelector(".output-17");
 
-function fn17() {}
+function fn17() {
+ let count = 0;
+
+  for (const currentNumber of array17) {
+    if (currentNumber > 3) {
+      count += 1;
+    }
+  }
+  out_17.innerHTML = count;
+}
 
 document.querySelector(".btn-17").onclick = fn17;
 
@@ -220,8 +276,18 @@ document.querySelector(".btn-17").onclick = fn17;
 // Використовуючи цикл, виведіть в .output-18 значення найбільшого числа масиву array18.
 
 const array18 = [15, 24, 13, 78, 21, 4, 45, 67];
+const out_18 = document.querySelector(".output-18");
 
-function fn18() {}
+function fn18() {
+  let a = array18[0];
+  for (let index = 0; index < array18.length; index += 1) {
+    const element = array18[index];
+    if (a < element) {
+      a = element
+    }
+  }
+  out_18.innerHTML = a;
+}
 
 document.querySelector(".btn-18").onclick = fn18;
 
@@ -229,8 +295,20 @@ document.querySelector(".btn-18").onclick = fn18;
 // Виведіть у .output-19 індекс мінімального числа в масиві array19
 
 const array19 = [15, 424, 313, 78, 241, 4, 45, 67];
+const out_19 = document.querySelector(".output-19");
 
-function fn19() {}
+function fn19() {
+
+  let markup = "";
+  let a = array19[0];
+
+  for (let i = 0; i < array19.length; i += 1) {
+    const element = array19[i];
+    if (a > element)
+    markup += `${i} `;
+  }
+   out_19.innerHTML = markup;
+}
 
 document.querySelector(".btn-19").onclick = fn19;
 
@@ -238,7 +316,14 @@ document.querySelector(".btn-19").onclick = fn19;
 // Виведіть у .output-20 суму елементів у масиві array20.
 
 const array20 = [4, 5, 6, 7, 8, 9, 10];
+const out_20 = document.querySelector(".output-20");
 
-function fn20() {}
+function fn20() {
+  let total = 0; 
+  for (const item of array20) {
+    total += item;
+  }
+  out_20.innerHTML = total;
+}
 
 document.querySelector(".btn-20").onclick = fn20;
