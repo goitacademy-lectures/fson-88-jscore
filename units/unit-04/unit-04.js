@@ -4,9 +4,20 @@
 
 // де символи * малюються за допомогою внутрішнього циклу від 0 до 3, а символ _ за допомогою зовнішнього циклу
 
-function fn1() {}
+// function fn1() {
+//   const element = document.querySelector('.output-1');
 
-document.querySelector(".btn-1").onclick = fn1;
+//   let string = '';
+
+//   for (let i = 0; i < 3; i += 1) {
+//     for (let j = 0; j < 3; j += 1) {
+//       string += '*';
+//     }
+//     string += '_';
+//   }
+// }
+
+// document.querySelector('.btn-1').onclick = fn1;
 
 // Task 2
 // За допомогою вкладених циклів виведіть на сторінку наступний рядок:
@@ -19,9 +30,24 @@ document.querySelector(".btn-1").onclick = fn1;
 
 // Розв'язати задачу за допомогою вкладених циклів. Зовнішній цикл виводить цифру та знак переносу рядка <br>, внутрішній – *_, і після цього зовнішній – знак переносу <br>.
 
-function fn2() {}
+// function fn2() {
+//   const elements = document.querySelector('.output-2');
 
-document.querySelector(".btn-2").onclick = fn2;
+//   let string = '';
+
+//   for (let i = 1; i < 4; i++) {
+//     string += i + '<br>';
+//     for (let j = 0; j < 3; j += 1) {
+//       string += '*_';
+//     }
+//     string += '<br>';
+//   }
+//   elements.innerHTML = string;
+
+//   document.querySelector('.btn-1').onclick = fn1;
+// }
+
+// document.querySelector('.btn-2').onclick = fn2;
 
 // Task 3
 // За допомогою вкладених циклів виведіть на сторінку наступний рядок:
@@ -32,18 +58,43 @@ document.querySelector(".btn-2").onclick = fn2;
 
 // Розв'язати задачу за допомогою вкладених циклів. Внутрішній цикл виводить *_, зовнішній цикл виводить знак переносу <br>.
 
-function fn3() {}
+// function fn3() {
+//   const elements = document.querySelector('.output-3');
 
-document.querySelector(".btn-3").onclick = fn3;
+//   let string = '';
+
+//   for (let i = 1; i < 4; i++) {
+//     for (let j = 0; j < 3; j += 1) {
+//       string += '*_';
+//     }
+//     string += '<br>';
+//   }
+//   elements.innerHTML = string;
+// }
+
+// document.querySelector('.btn-3').onclick = fn3;
 
 // Task 4
 // За допомогою вкладених циклів виведіть на сторінку наступний рядок:
 // 1_1*2*3*4*5*2_1*2*3*4*5*3_1*2*3*4*5*
 
 //  Зовнішній цикл виводить цифру та _, а внутрішній виводить від 1 до 5 із *
-function fn4() {}
+// function fn4() {
+//   const elements = document.querySelector('.output-4');
 
-document.querySelector(".btn-4").onclick = fn4;
+//   let string = '';
+
+//   for (let i = 1; i < 4; i++) {
+//     string = `${i}_`;
+//     for (let j = 1; j < 7; j += 1) {
+//       string += `${j}*`;
+//     }
+//     // string += '<br>';
+//   }
+//   elements.innerHTML = string;
+// }
+
+// document.querySelector('.btn-4').onclick = fn4;
 
 // Task 5
 // За допомогою вкладених циклів виведіть на сторінку наступний рядок:
@@ -52,9 +103,25 @@ document.querySelector(".btn-4").onclick = fn4;
 // 101010
 
 //  Вкладений цикл залежно від парного чи ні k лічильника циклу малює 0 або 1. Зовнішній цикл - <br>.
-function fn5() {}
+// function fn5() {
+//   const element = document.querySelector('.output-5');
+//   let output = '';
 
-document.querySelector(".btn-5").onclick = fn5;
+//   for (let i = 0; i < 3; i++) {
+//     for (let j = 0; j < 6; j++) {
+//       if (j % 2 === 0) {
+//         output += '1';
+//       } else {
+//         output += '0';
+//       }
+//     }
+//     output += '<br>';
+//   }
+
+//   element.innerHTML = output;
+// }
+
+// document.querySelector('.btn-5').onclick = fn5;
 
 // Task 6
 // За допомогою вкладених циклів виведіть на сторінку наступний рядок:
@@ -62,9 +129,20 @@ document.querySelector(".btn-5").onclick = fn5;
 // 10x01x
 // 10x01x
 
-function fn6() {}
+// function fn6() {
+//   const element = document.querySelector('.output-6');
+//     let output = '';
 
-document.querySelector(".btn-6").onclick = fn6;
+//     for (let i = 0; i < 3; i++) {
+//         for (let j = 0; j < 6; j++) {
+//           if (j === 0 || j === 4) output += 1;
+//           if (j === 1 || j === 3) output += 0;
+//           if (j === 2 || j === 5) output += 'x';
+
+//       }
+// }
+
+// document.querySelector('.btn-6').onclick = fn6;
 
 // Task 7
 // За допомогою вкладених циклів виведіть на сторінку наступний рядок:
@@ -72,10 +150,6 @@ document.querySelector(".btn-6").onclick = fn6;
 // **
 // ***
 // ****
-
-function fn7() {}
-
-document.querySelector(".btn-7").onclick = fn7;
 
 // Task 8
 // За допомогою вкладених циклів виведіть на сторінку наступний рядок:
@@ -85,9 +159,16 @@ document.querySelector(".btn-7").onclick = fn7;
 // **
 // *
 
-function fn8() {}
+function fn8() {
+      const element = document.querySelector('.output-6');
+  let output = '';
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 6; j++) {}
+  }
+}
+}
 
-document.querySelector(".btn-8").onclick = fn8;
+document.querySelector('.btn-8').onclick = fn8;
 
 // Task 9
 // За допомогою вкладених циклів виведіть на сторінку наступний рядок:
@@ -99,7 +180,7 @@ document.querySelector(".btn-8").onclick = fn8;
 
 function fn9() {}
 
-document.querySelector(".btn-9").onclick = fn9;
+document.querySelector('.btn-9').onclick = fn9;
 
 // Task 10
 // За допомогою вкладених циклів виведіть на сторінку наступний рядок:
@@ -111,4 +192,4 @@ document.querySelector(".btn-9").onclick = fn9;
 
 function fn10() {}
 
-document.querySelector(".btn-10").onclick = fn10;
+document.querySelector('.btn-10').onclick = fn10;
