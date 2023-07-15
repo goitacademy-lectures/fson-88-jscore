@@ -118,7 +118,7 @@
 // const discountPremium = saveDiscount(50);
 // console.log(discountPremium(1000));
 
-// import users from "./db.js";
+import users from "./users.js";
 /**
   |============================
   | Завдання 1
