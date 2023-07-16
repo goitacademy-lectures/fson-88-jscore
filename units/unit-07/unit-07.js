@@ -12,6 +12,19 @@
 // виведіть в консоль повідомлення "Ви не ввели імʼя"
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function letMeSeeYourName(callback) {
+//   const name = prompt("Введіть ім'я");
+//   callback(name);
+// }
+
+// function greet (name) {
+//   // if (name === "" || name === null) {
+//   if (!name) {
+//     console.log("Ви не ввели імʼя");
+//     return;
+//   } console.log(`Привіт ${name}`);
+// }
+// letMeSeeYourName(greet)
 /**
   |============================
   | Завдання 2
@@ -27,11 +40,23 @@
 // продукту і виводить інформацію у консоль
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function makeProduct(name, price, callback) {
+//   const product = {
+//     name,
+//     price,
+//     id: new Date().getTime()
+//   }
+//   callback(product);
+// }
+
+// function showProduct(product) {
+//   console.log(product);
+// }
 // makeProduct("Fish", 350, showProduct);
 
 /**
   |============================
-  | Завдання 3
+  | Завдання 3  не вийшло
   |============================
 */
 // Виконай рефакторинг makeDish так, щоб не потрібно було
@@ -39,11 +64,14 @@
 // Напишіть функцію makeShef(shefName), яка повертає функцію
 // makeDish(dish), що пам'ятає ім'я шефа під час її виклику
 //++++++++++++++++++ Рішення ++++++++++++++++++
-// const makeDish = function (shefName, dish) {
-// console.log(`${shefName} is cooking ${dish}`);
-// };
+// const makeShef = function (name) {
+//   return function makeDish (dish) {
+//     console.log(`${name} is cooking ${dish}`)
+//   }
+// }
 
-// makeDish("Mango", "apple pie");
+// makeDish("Mango");
+// makeDish("apple pie");
 // makeDish("Poly", "muffins");
 
 /**
@@ -129,6 +157,11 @@ import users from "./users.js";
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+function getUserNames(users) {
+  return users.map(({ name }) => name)
+}
+
+console.log(getUserNames(users));
 /**
   |============================
   | Завдання 2
@@ -137,6 +170,9 @@ import users from "./users.js";
 // Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
 // console.log(getUsersWithEyeColor(users, 'blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
 //++++++++++++++++++ Рішення ++++++++++++++++++
+function getUsersWithEyeColor(users, color) {
+  return users.filter(({eyeColor}) => eyeColor === color)
+}
 
 /**
   |============================
@@ -146,7 +182,9 @@ import users from "./users.js";
 // Отримати масив імен користувачів за статтю (поле gender)
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
-
+function getUsersWithGender(users, userGender) {
+  return users.filter(({ gender }) => gender === userGender);
+}
 /**
   |============================
   | Завдання 4
