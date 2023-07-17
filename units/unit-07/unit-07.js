@@ -56,7 +56,7 @@
 
 /**
   |============================
-  | Завдання 3  не вийшло
+  | Завдання 3  
   |============================
 */
 // Виконай рефакторинг makeDish так, щоб не потрібно було
@@ -64,19 +64,25 @@
 // Напишіть функцію makeShef(shefName), яка повертає функцію
 // makeDish(dish), що пам'ятає ім'я шефа під час її виклику
 //++++++++++++++++++ Рішення ++++++++++++++++++
+
 // const makeShef = function (name) {
-//   return function makeDish (dish) {
+//   const makeDish = function (dish) {
 //     console.log(`${name} is cooking ${dish}`)
 //   }
+//   return makeDish
 // }
+// const mango = makeShef('Mango');
 
-// makeDish("Mango");
-// makeDish("apple pie");
-// makeDish("Poly", "muffins");
+// mango('chiken');
+// mango('burger');
+
+// const poly = makeShef('Poly');
+// poly('pizza');
+// poly('sandvich');
 
 /**
   |============================
-  | Завдання 4
+  | Завдання 4    
   |============================
 */
 // Напишіть функцію each(array, callback)
@@ -89,15 +95,33 @@
 //  - за допомогою function declaration
 //  - за допомогою arrow function
 //++++++++++++++++++ Рішення function declaration ++++++++++++++++++
-// function each(array, callback) {}
+// function each(array, multiply) {
+//   const items = [];
+//   array.forEach(element => {
+//     const result = multiply(element);
+//     items.push(result);
+//   })
+//   return items;
+// }
 
 // function multiply(value) {
-//   return;
+//   return value * 2;
 // }
 // const array = [3, 5, 6, 34, 8, 83, 12, 34];
 
 // console.log(each(array, multiply));
 //++++++++++++++++++ Рішення arrow function ++++++++++++++++++
+// function each(array, multiply) {
+//   const items = [];
+//   array.forEach(element => items.push(multiply(element)));
+//   return items;
+// }
+
+// let multiply = ((value ) => value * 2);
+
+// const array = [3, 5, 6, 34, 8, 83, 12, 34];
+
+// console.log(each(array, multiply));
 
 /**
   |============================
@@ -110,7 +134,17 @@
 //  - за допомогою function declaration
 //  - за допомогою arrow function
 //++++++++++++++++++ Рішення function declaration ++++++++++++++++++
+function makeCounter() {
 
+}
+
+const makeShef = function (name) {
+  const makeDish = function (dish) {
+    console.log(`${name} is cooking ${dish}`)
+  }
+  return makeDish
+}
+const mango = makeShef('Mango');
 //++++++++++++++++++ Рішення arrow function ++++++++++++++++++
 
 /**
@@ -174,6 +208,7 @@ function getUsersWithEyeColor(users, color) {
   return users.filter(({eyeColor}) => eyeColor === color)
 }
 
+console.log(getUsersWithEyeColor(users, 'blue'));
 /**
   |============================
   | Завдання 3
@@ -183,8 +218,10 @@ function getUsersWithEyeColor(users, color) {
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 function getUsersWithGender(users, userGender) {
-  return users.filter(({ gender }) => gender === userGender);
+  return users.filter(({ gender }) => gender === userGender).flatMap(({name}) => name);
 }
+
+console.log(getUsersWithGender(users, 'male'));
 /**
   |============================
   | Завдання 4
@@ -194,6 +231,11 @@ function getUsersWithGender(users, userGender) {
 // console.log(getInactiveUsers(users)); // [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+function getInactiveUsers(users) {
+return users.filter(({isActive}) => isActive === false)
+};
+
+console.log(getInactiveUsers(users))
 /**
   |============================
   | Завдання 5
@@ -204,6 +246,11 @@ function getUsersWithGender(users, userGender) {
 // console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {об'єкт користувача Elma Head}
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+function getUserWithEmail(users, email) {
+  return users.find((user) => user.email === email);
+}
+console.log(getUserWithEmail(users, 'shereeanthony@kog.com'));
+console.log(getUserWithEmail(users, 'elmahead@omatom.com')); 
 /**
   |============================
   | Завдання 6
@@ -215,7 +262,10 @@ function getUsersWithGender(users, userGender) {
 // console.log (getUsersWithAge(users, 30, 40));
 // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Blackburn Dotson, об'єкт Sheree Anthony]
 //++++++++++++++++++ Рішення ++++++++++++++++++
-
+function getUsersWithAge(users, minAge, maxAge) {
+  return users.filter(({ age }) => age >= minAge && age < maxAge);
+};
+console.log(getUsersWithAge(users, 20, 30));
 /**
   |============================
   | Завдання 7
@@ -225,6 +275,13 @@ function getUsersWithGender(users, userGender) {
 // console.log(calculateTotalBalance(users)); // 20916
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+function calculateTotalBalance(users) {
+  return users.reduce((total, user) => {
+    return total + user.balance;
+  }, 0);
+}
+
+console.log(calculateTotalBalance(users));
 /**
   |============================
   | Завдання 8
@@ -234,7 +291,11 @@ function getUsersWithGender(users, userGender) {
 // console.log(getUsersWithFriend(users, 'Briana Decker'))); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 // console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
+function getUsersWithFriend(users, friendName) {
+return users.filter(({friends}) => friends.includes(friendName)).map(user => user.name);
+};
 
+console.log(getUsersWithFriend(users, 'Goldie Gentry'));
 /**
   |============================
   | Завдання 9
@@ -244,7 +305,13 @@ function getUsersWithGender(users, userGender) {
 // console.log(getNamesSortedByFriendCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
+function getNamesSortedByFriendCount(users) {
+  return [...users]
+    .sort((a, b) => a.friends.length - b.friends.length)
+    .map(user => user.name);
+}
 
+console.log(getNamesSortedByFriendCount(users));
 /**
   |============================
   | Завдання 10
@@ -255,7 +322,14 @@ function getUsersWithGender(users, userGender) {
 // ['adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum',
 // 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam']
 //++++++++++++++++++ Рішення ++++++++++++++++++
+function getSkills(users) {
+  return [...users]
+    .flatMap(user => user.skills)
+    .filter((skill, index, array) => array.indexOf(skill) === index)
+    .sort((a, b) => a.localeCompare(b));
+}
 
+console.log(getSkills(users));
 /**
   |============================
   | Завдання 11
@@ -266,6 +340,11 @@ function getUsersWithGender(users, userGender) {
 // const data = [0, 1, false, 2, undefined, "", 3, null];
 // console.log(compact(data)); // [1, 2, 3]
 //++++++++++++++++++ Рішення ++++++++++++++++++
+function compact(arr) {
+  return arr.filter((n) =>  n !== false || n !== undefined || n !== "" || n !== 0 || n !== null )};
+
+const data = [0, 1, false, 2, undefined, "", 3, null];
+console.log(compact(data)); // [1, 2, 3]
 
 /**
   |============================
@@ -416,7 +495,7 @@ const workers = [
 // Даний масив із числами. Залишіть у ньому лише додатні числа.
 // Потім порахуйте квадратний корінь цих чисел.
 //++++++++++++++++++ Рішення ++++++++++++++++++
-const array = [121, -2, 225, 0, 4, -5, 36, -11];
+// const array = [121, -2, 225, 0, 4, -5, 36, -11];
 
 /**
   |============================
