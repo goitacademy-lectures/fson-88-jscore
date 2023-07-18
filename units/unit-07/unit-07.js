@@ -95,6 +95,7 @@
 //  - за допомогою function declaration
 //  - за допомогою arrow function
 //++++++++++++++++++ Рішення function declaration ++++++++++++++++++
+
 // function each(array, multiply) {
 //   const items = [];
 //   array.forEach(element => {
@@ -111,6 +112,7 @@
 
 // console.log(each(array, multiply));
 //++++++++++++++++++ Рішення arrow function ++++++++++++++++++
+
 // function each(array, multiply) {
 //   const items = [];
 //   array.forEach(element => items.push(multiply(element)));
@@ -135,35 +137,31 @@
 //  - за допомогою arrow function
 //++++++++++++++++++ Рішення function declaration ++++++++++++++++++
 
-// let makeCounter = (function () {
-//   let initValue = 0
-//   return function () {
-//     initValue += 1;
-//     return initValue
-//   }
-// })();
-function makeCounter() {
-  let currentCount = 0;
-
-  return function() {
-    return currentCount += 1;
-  };
-}
-let counter = makeCounter();
-
-console.log( counter() ); 
-console.log( counter() ); 
-console.log( counter() ); 
-
-//++++++++++++++++++ Рішення arrow function ++++++++++++++++++  переробить, не вірно
 // function makeCounter() {
-//   let currentCount = 1;
+//   let currentCount = 0;
 
 //   return function() {
 //     return currentCount += 1;
 //   };
 // }
 // let counter = makeCounter();
+
+// console.log( counter() ); 
+// console.log( counter() ); 
+// console.log( counter() ); 
+
+//++++++++++++++++++ Рішення arrow function ++++++++++++++++++ 
+
+function makeCounter() {
+  let currentCount = 0;
+  return () => currentCount += 1;
+  };
+
+let counter = makeCounter();
+
+console.log( counter() ); 
+console.log( counter() ); 
+console.log( counter() ); 
 
 /**
   |============================
@@ -370,8 +368,9 @@ console.log(getSkills(users));
 // console.log(compact(data)); // [1, 2, 3]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 function compact(arr) {
-  return arr.filter((n) =>  n !== false || n !== undefined || n !== "" || n !== 0 || n !== null )};
-
+  const newArr = arr.filter(Boolean);
+  return newArr;
+}
 const data = [0, 1, false, 2, undefined, "", 3, null];
 console.log(compact(data)); // [1, 2, 3]
 
