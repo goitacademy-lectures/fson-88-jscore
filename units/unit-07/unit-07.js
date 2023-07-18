@@ -165,7 +165,7 @@ console.log( counter() );
 
 /**
   |============================
-  | Завдання 6
+  | Завдання 6 ---- поки що дуже не дуже ..
   |============================
 */
 // Напишіть функцію savePassword(password), яка приймає значення паролю,
@@ -175,18 +175,17 @@ console.log( counter() );
 // якщо рядок збігається зі збереженим паролем або якщо не збігається
 // "Збережений пароль: qwerty не збігається з введеним паролем asdfgh",
 //++++++++++++++++++ Рішення ++++++++++++++++++
-// function savePassword(password) {
-  
-//   return checkPassword;
-// }
 
-// const checkPassword = function (str) {
-//   for (const word of str) {
+// function savePassword(password) {
+//   return function checkPassword(str) {
 //     if (password === str) {
-//       return console.log(`${password} збігається з введеним паролем ${str}`);
-//     } return console.log(`Збережений пароль: ${password} не збігається з введеним паролем ${str}`);
+//       return `Збережений пароль: ${password} збігається з введеним паролем ${str}`;
+//     } else {
+//       return `Збережений пароль: ${password} не збігається з введеним паролем ${str}`;
+//     }
 //   }
 // }
+
 // const enteredPassword = savePassword("qwerty");
 // console.log(enteredPassword("qwerty"));
 // console.log(enteredPassword("asdfgh"));
@@ -204,8 +203,14 @@ console.log( counter() );
 // стрілочні callback-функції
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
-// const discountPremium = saveDiscount(50);
-// console.log(discountPremium(1000));
+function saveDiscount(discount) {
+  return function makeDiscount(sum) {
+    return sum - (sum * discount) / 100;
+   }
+}
+
+const discountPremium = saveDiscount(50);
+console.log(discountPremium(1000));
 
 import users from "./users.js";
 /**
