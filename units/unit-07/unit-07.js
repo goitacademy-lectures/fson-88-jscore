@@ -134,18 +134,36 @@
 //  - за допомогою function declaration
 //  - за допомогою arrow function
 //++++++++++++++++++ Рішення function declaration ++++++++++++++++++
+
+// let makeCounter = (function () {
+//   let initValue = 0
+//   return function () {
+//     initValue += 1;
+//     return initValue
+//   }
+// })();
 function makeCounter() {
+  let currentCount = 0;
 
+  return function() {
+    return currentCount += 1;
+  };
 }
+let counter = makeCounter();
 
-const makeShef = function (name) {
-  const makeDish = function (dish) {
-    console.log(`${name} is cooking ${dish}`)
-  }
-  return makeDish
-}
-const mango = makeShef('Mango');
-//++++++++++++++++++ Рішення arrow function ++++++++++++++++++
+console.log( counter() ); 
+console.log( counter() ); 
+console.log( counter() ); 
+
+//++++++++++++++++++ Рішення arrow function ++++++++++++++++++  переробить, не вірно
+// function makeCounter() {
+//   let currentCount = 1;
+
+//   return function() {
+//     return currentCount += 1;
+//   };
+// }
+// let counter = makeCounter();
 
 /**
   |============================
@@ -159,7 +177,18 @@ const mango = makeShef('Mango');
 // якщо рядок збігається зі збереженим паролем або якщо не збігається
 // "Збережений пароль: qwerty не збігається з введеним паролем asdfgh",
 //++++++++++++++++++ Рішення ++++++++++++++++++
+// function savePassword(password) {
+  
+//   return checkPassword;
+// }
 
+// const checkPassword = function (str) {
+//   for (const word of str) {
+//     if (password === str) {
+//       return console.log(`${password} збігається з введеним паролем ${str}`);
+//     } return console.log(`Збережений пароль: ${password} не збігається з введеним паролем ${str}`);
+//   }
+// }
 // const enteredPassword = savePassword("qwerty");
 // console.log(enteredPassword("qwerty"));
 // console.log(enteredPassword("asdfgh"));
