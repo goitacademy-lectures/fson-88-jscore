@@ -332,7 +332,21 @@ const courses = [
   |============================
 */
 // Призначити знижку 20% на фрукти в масиві,
-// Присвоїти ID для кожного продукту
+// Присвоїти ID для кожного продукту використавши функцію generateRandomId()
+function generateRandomId(length) {
+  let result = "";
+  const characters = "0123456789";
+  const charactersLength = characters.length;
+
+  for (let i = 0; i < length; i += 1) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+
+  return result;
+}
+// Приклад роботи функціх для генерації ID з 10 символів
+// console.log(generateRandomId(10));
+
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
 const fruits = [
