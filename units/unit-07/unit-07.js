@@ -203,14 +203,19 @@ console.log( counter() );
 // стрілочні callback-функції
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
-function saveDiscount(discount) {
-  return function makeDiscount(sum) {
-    return sum - (sum * discount) / 100;
-   }
-}
+// function saveDiscount(discount) {
+//   return function makeDiscount(sum) {
+//     return sum - (sum * discount) / 100;
+//    }
+// }
 
-const discountPremium = saveDiscount(50);
-console.log(discountPremium(1000));
+//++++++++++++++++++ Рішення arrow function ++++++++++++++++++ 
+// function saveDiscount(discount) {
+//    return sum => sum - (sum * discount) / 100;
+// }
+
+// const discountPremium = saveDiscount(50);
+// console.log(discountPremium(1000));
 
 import users from "./users.js";
 /**
@@ -223,11 +228,11 @@ import users from "./users.js";
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
-function getUserNames(users) {
-  return users.map(({ name }) => name)
-}
+// function getUserNames(users) {
+//   return users.map(({ name }) => name)
+// }
 
-console.log(getUserNames(users));
+// console.log(getUserNames(users));
 /**
   |============================
   | Завдання 2
@@ -236,11 +241,11 @@ console.log(getUserNames(users));
 // Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
 // console.log(getUsersWithEyeColor(users, 'blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
 //++++++++++++++++++ Рішення ++++++++++++++++++
-function getUsersWithEyeColor(users, color) {
-  return users.filter(({eyeColor}) => eyeColor === color)
-}
+// function getUsersWithEyeColor(users, color) {
+//   return users.filter(({eyeColor}) => eyeColor === color)
+// }
 
-console.log(getUsersWithEyeColor(users, 'blue'));
+// console.log(getUsersWithEyeColor(users, 'blue'));
 /**
   |============================
   | Завдання 3
@@ -263,11 +268,11 @@ console.log(getUsersWithGender(users, 'male'));
 // console.log(getInactiveUsers(users)); // [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
-function getInactiveUsers(users) {
-return users.filter(({isActive}) => isActive === false)
-};
+// function getInactiveUsers(users) {
+// return users.filter(({isActive}) => isActive === false)
+// };
 
-console.log(getInactiveUsers(users))
+// console.log(getInactiveUsers(users))
 /**
   |============================
   | Завдання 5
@@ -278,11 +283,11 @@ console.log(getInactiveUsers(users))
 // console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {об'єкт користувача Elma Head}
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
-function getUserWithEmail(users, email) {
-  return users.find((user) => user.email === email);
-}
-console.log(getUserWithEmail(users, 'shereeanthony@kog.com'));
-console.log(getUserWithEmail(users, 'elmahead@omatom.com')); 
+// function getUserWithEmail(users, email) {
+//   return users.find((user) => user.email === email);
+// }
+// console.log(getUserWithEmail(users, 'shereeanthony@kog.com'));
+// console.log(getUserWithEmail(users, 'elmahead@omatom.com')); 
 /**
   |============================
   | Завдання 6
@@ -294,10 +299,10 @@ console.log(getUserWithEmail(users, 'elmahead@omatom.com'));
 // console.log (getUsersWithAge(users, 30, 40));
 // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Blackburn Dotson, об'єкт Sheree Anthony]
 //++++++++++++++++++ Рішення ++++++++++++++++++
-function getUsersWithAge(users, minAge, maxAge) {
-  return users.filter(({ age }) => age >= minAge && age < maxAge);
-};
-console.log(getUsersWithAge(users, 20, 30));
+// function getUsersWithAge(users, minAge, maxAge) {
+//   return users.filter(({ age }) => age >= minAge && age < maxAge);
+// };
+// console.log(getUsersWithAge(users, 20, 30));
 /**
   |============================
   | Завдання 7
@@ -307,13 +312,13 @@ console.log(getUsersWithAge(users, 20, 30));
 // console.log(calculateTotalBalance(users)); // 20916
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
-function calculateTotalBalance(users) {
-  return users.reduce((total, user) => {
-    return total + user.balance;
-  }, 0);
-}
+// function calculateTotalBalance(users) {
+//   return users.reduce((total, user) => {
+//     return total + user.balance;
+//   }, 0);
+// }
 
-console.log(calculateTotalBalance(users));
+// console.log(calculateTotalBalance(users));
 /**
   |============================
   | Завдання 8
@@ -323,11 +328,11 @@ console.log(calculateTotalBalance(users));
 // console.log(getUsersWithFriend(users, 'Briana Decker'))); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 // console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
-function getUsersWithFriend(users, friendName) {
-return users.filter(({friends}) => friends.includes(friendName)).map(user => user.name);
-};
+// function getUsersWithFriend(users, friendName) {
+// return users.filter(({friends}) => friends.includes(friendName)).map(user => user.name);
+// };
 
-console.log(getUsersWithFriend(users, 'Goldie Gentry'));
+// console.log(getUsersWithFriend(users, 'Goldie Gentry'));
 /**
   |============================
   | Завдання 9
@@ -337,13 +342,13 @@ console.log(getUsersWithFriend(users, 'Goldie Gentry'));
 // console.log(getNamesSortedByFriendCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
-function getNamesSortedByFriendCount(users) {
-  return [...users]
-    .sort((a, b) => a.friends.length - b.friends.length)
-    .map(user => user.name);
-}
+// function getNamesSortedByFriendCount(users) {
+//   return [...users]
+//     .sort((a, b) => a.friends.length - b.friends.length)
+//     .map(user => user.name);
+// }
 
-console.log(getNamesSortedByFriendCount(users));
+// console.log(getNamesSortedByFriendCount(users));
 /**
   |============================
   | Завдання 10
@@ -354,14 +359,14 @@ console.log(getNamesSortedByFriendCount(users));
 // ['adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum',
 // 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam']
 //++++++++++++++++++ Рішення ++++++++++++++++++
-function getSkills(users) {
-  return [...users]
-    .flatMap(user => user.skills)
-    .filter((skill, index, array) => array.indexOf(skill) === index)
-    .sort((a, b) => a.localeCompare(b));
-}
+// function getSkills(users) {
+//   return [...users]
+//     .flatMap(user => user.skills)
+//     .filter((skill, index, array) => array.indexOf(skill) === index)
+//     .sort((a, b) => a.localeCompare(b));
+// }
 
-console.log(getSkills(users));
+// console.log(getSkills(users));
 /**
   |============================
   | Завдання 11
@@ -372,26 +377,34 @@ console.log(getSkills(users));
 // const data = [0, 1, false, 2, undefined, "", 3, null];
 // console.log(compact(data)); // [1, 2, 3]
 //++++++++++++++++++ Рішення ++++++++++++++++++
-function compact(arr) {
-  const newArr = arr.filter(Boolean);
-  return newArr;
-}
-const data = [0, 1, false, 2, undefined, "", 3, null];
-console.log(compact(data)); // [1, 2, 3]
+// function compact(arr) {
+//   const newArr = arr.filter(Boolean);
+//   return newArr;
+// }
+// const data = [0, 1, false, 2, undefined, "", 3, null];
+// console.log(compact(data)); // [1, 2, 3]
 
 /**
   |============================
-  | Завдання 12
+  | Завдання 12 --- шось туплю !!!
   |============================
 */
 // Напишіть функцію without(), яка повертає новий масив без наданих значень. Використовуйте примітивні типи.
 // const data = [1, 2, 3, 4, 1, 2];
 // console.log(without(data, 1, 2)); // [3, 4]
 //++++++++++++++++++ Рішення ++++++++++++++++++
+// function without(arr) {
+// for( let i = arr.length - 1; i >= 0; i-=1 ){
+//   arr.splice( arr[i], 1);
+// }
+//   return arr;
+// }
 
+// const data = [1, 2, 3, 4, 1, 2];
+// console.log(without(data, 1, 2));
 /**
   |============================
-  | Завдання 13
+  | Завдання 13 --- не вирішено !!!
   |============================
 */
 // Необхідно написати функцію isEqualSymbols(), що приймає в аргументах два рядки
@@ -409,8 +422,12 @@ console.log(compact(data)); // [1, 2, 3]
 // Сортування примітивів.
 // Виконайте сортування масиву цін за спаданням та зростанням
 //++++++++++++++++++ Рішення ++++++++++++++++++
-const prices = [1000, 240, 670, 360, 89, 20];
 
+// const prices = [1000, 240, 670, 360, 89, 20];
+// const priceSort = [...prices].sort((a, b) => a - b);
+// const priceSort2 = [...prices].sort((a, b) => b - a);
+// console.log(priceSort);
+// console.log(priceSort2);
 /**
   |============================
   | Завдання 15
@@ -419,8 +436,11 @@ const prices = [1000, 240, 670, 360, 89, 20];
 // Сортування рядків.
 // Виконайте сортування масиву назв моніторів у алфавітному та зворотньому порядку.
 //++++++++++++++++++ Рішення ++++++++++++++++++
-const monitors = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ", "ASER"];
-
+// const monitors = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ", "ASER"];
+// const sortAtoB = [...monitors].sort((a, b) => a.localeCompare(b));
+// const sortBtoA = [...monitors].sort((a, b) => b.localeCompare(a));
+// console.log(sortAtoB);
+// console.log(sortBtoA);
 /**
   |============================
   | Завдання 16
@@ -431,14 +451,21 @@ const monitors = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ", "ASER"];
 // 1. За зростанням та зменшенням значення властивості price
 // 2. За ім'ям в алфавітному та зворотному порядку
 //++++++++++++++++++ Рішення ++++++++++++++++++
-const items = [
-  { name: "SAMSUNG", price: 15000 },
-  { name: "LG", price: 9000 },
-  { name: "DELL", price: 27000 },
-  { name: "BENQ", price: 12000 },
-  { name: "ASER", price: 7000 },
-];
-
+// const items = [
+//   { name: "SAMSUNG", price: 15000 },
+//   { name: "LG", price: 9000 },
+//   { name: "DELL", price: 27000 },
+//   { name: "BENQ", price: 12000 },
+//   { name: "ASER", price: 7000 },
+// ];
+// const sortPrice1 = [...items].sort((a, b) => a.price - b.price);
+// const sortPrice2 = [...items].sort((a, b) => b.price - a.price);
+// const sortName1 = [...items].sort((a, b) => a.name.localeCompare(b.name));
+// const sortName2 = [...items].sort((a, b) => b.name.localeCompare(a.name));
+// console.log(sortPrice1);
+// console.log(sortPrice2);
+// console.log(sortName1);
+// console.log(sortName2);
 /**
   |============================
   | Завдання 17
@@ -447,35 +474,37 @@ const items = [
 // Зібрати в allTopics масив всіх предметів всіх курсів
 // Виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи
 //++++++++++++++++++ Рішення ++++++++++++++++++
-const courses = [
-  {
-    name: "Basic HTML+CSS",
-    topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
-  },
-  {
-    name: "Intermediate HTML+CSS",
-    topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
-  },
-  {
-    name: "Basic JavaScript",
-    topics: [
-      "VSCode",
-      "Type system",
-      "Loops",
-      "Function",
-      "Git",
-      "Conditions",
-      "Classes",
-      "GitHub",
-      "DOM",
-    ],
-  },
-  {
-    name: "Intermediate JavaScript",
-    topics: ["VSCode", "NPM", "Bundlers", "Transpiling", "Git", "Promises", "AJAX", "GitHub"],
-  },
-];
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Function",
+//       "Git",
+//       "Conditions",
+//       "Classes",
+//       "GitHub",
+//       "DOM",
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: ["VSCode", "NPM", "Bundlers", "Transpiling", "Git", "Promises", "AJAX", "GitHub"],
+//   },
+// ];
 
+// const allTopics = courses.flatMap(course => course.topics).filter((topic, index, array) => array.indexOf(topic) === index);
+// console.log(allTopics);
 /**
   |============================
   | Завдання 18
@@ -491,6 +520,9 @@ const fruits = [
   { name: "grapes", price: 750 },
 ];
 
+const discount =
+  
+console.log(discount);
 /**
   |============================
   | Завдання 19
