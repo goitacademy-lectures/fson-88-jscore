@@ -10,14 +10,14 @@
 //   discount: 0.1,
 //   orders: ["order-1", "order-2", "order-3"],
 //   changeDiscount(value) {
-//     discount = value;
+//     this.discount = value;
 //   },
 //   showOrders() {
-//     return orders;
+//     return this.orders;
 //   },
 //   addOrder(cost, order) {
-//     balance -= cost;
-//     orders.push(order);
+//     this.balance -= cost;
+//     this.orders.push(order);
 //   },
 // };
 
@@ -95,25 +95,33 @@
   | який виводить в консоль значення полів login і email об'єкта який його викликав.
   |============================
 */
-// function Account() {
-// }
+// class Account {
+//   constructor(login, email) {
+//     this.login = login;
+//     this.email = email;
+//   }
 
-//==============================================================================
+//   getInfo () {
+//     return `login: ${this.login}, email: ${this.email}`
+//   }
+// }
+// //==============================================================================
 // console.log(Account.prototype.getInfo); // function
 
-// const mango = new Account({
-//   login: 'Mangozedog',
-//   email: 'mango@dog.woof',
-// });
+// const mango = new Account(
+//   'Mangozedog',
+//   'mango@dog.woof'
+// );
 
 // mango.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
-
-// const poly = new Account({
-//   login: 'Poly',
-//   email: 'poly@mail.com',
-// });
+// console.log(mango.getInfo());
+// const poly = new Account(
+//   'Poly',
+//   'poly@mail.com'
+// );
 
 // poly.getInfo(); // Login: Poly, Email: poly@mail.com
+// console.log(poly.getInfo());
 
 /**
   |============================
