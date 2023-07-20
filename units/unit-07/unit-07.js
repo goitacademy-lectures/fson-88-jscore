@@ -386,21 +386,21 @@ import users from "./users.js";
 
 /**
   |============================
-  | Завдання 12 --- шось туплю !!!
+  | Завдання 12 
   |============================
 */
 // Напишіть функцію without(), яка повертає новий масив без наданих значень. Використовуйте примітивні типи.
 // const data = [1, 2, 3, 4, 1, 2];
 // console.log(without(data, 1, 2)); // [3, 4]
 //++++++++++++++++++ Рішення ++++++++++++++++++
-// function without(arr, value) {
-//   return arr.filter(el => el !== value)
+// function without(arr, value, value2) {
+//   return arr.filter(el => el !== value && el !== value2)
 // }
 // const data = [1, 2, 3, 4, 1, 2];
 // console.log(without(data, 1, 2));
 /**
   |============================
-  | Завдання 13 не дуже подобається рішення
+  | Завдання 13 
   |============================
 */
 // Необхідно написати функцію isEqualSymbols(), що приймає в аргументах два рядки
@@ -531,8 +531,6 @@ import users from "./users.js";
 //     return Math.floor(Math.random() * (100 - 1) + 1);
 //   }
 // });
-
-
 // console.log(fruits);
 /**
   |============================
