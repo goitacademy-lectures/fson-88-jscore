@@ -17,9 +17,9 @@ function fn2() {}
 document.querySelector(".btn-2").onclick = function () {
   document.querySelector(".output-2").textContent = fn2();
   // Перевірте результат роботи виразів нижче в консолі
-  // 5 + fn2() // має вивести 20
-  // 6 * t2(); // має вивести 90
-  // t2() * t2() * t2(); // 3375
+  5 + fn2(); // має вивести 20
+  6 * fn2(); // має вивести 90
+  fn2() * fn2() * fn2(); // 3375
 };
 
 // Task 3.
@@ -30,7 +30,7 @@ function fn3() {}
 document.querySelector(".btn-3-1").onclick = function () {
   const output = document.querySelector(".output-3-1");
   output.textContent = fn3(4, 4);
-  // як видно з прикладу, ми можемо всередину передати будь-які числа і t3 їх перемножить і поверне.
+  // як видно з прикладу, ми можемо всередину передати будь-які числа і fn3 їх перемножить і поверне.
 };
 document.querySelector(".btn-3-2").onclick = function () {
   const output = document.querySelector(".output-3-2");
@@ -71,7 +71,7 @@ function fn7() {
   // Отже, одне із цікавих завдань.
   // Нам потрібно зробити такий рядок, наприклад:
   // rgb(33, 123, 255) - числа можуть бути будь-які від 0 до 255
-  // У вас є функція t6, яка може генерувати випадкові цілі числа в потрібному діапазоні, давайте скористаємося нею
+  // У вас є функція fn6, яка може генерувати випадкові цілі числа в потрібному діапазоні, давайте скористаємося нею
 }
 
 document.querySelector(".btn-7").onclick = function () {
@@ -86,7 +86,7 @@ function fn8() {}
 document.querySelector(".btn-8").onclick = function () {
   let s = "            JavaScriptIsMyJam            ";
   console.log(s);
-  console.log(t8(s));
+  console.log(fn8(s));
 };
 
 // Task 9
