@@ -152,20 +152,20 @@
 
 //++++++++++++++++++ Рішення arrow function ++++++++++++++++++ 
 
-function makeCounter() {
-  let currentCount = 0;
-  return () => currentCount += 1;
-  };
+// function makeCounter() {
+//   let currentCount = 0;
+//   return () => currentCount += 1;
+//   };
 
-let counter = makeCounter();
+// let counter = makeCounter();
 
-console.log( counter() ); 
-console.log( counter() ); 
-console.log( counter() ); 
+// console.log( counter() ); 
+// console.log( counter() ); 
+// console.log( counter() ); 
 
 /**
   |============================
-  | Завдання 6 ---- поки що дуже не дуже ..
+  | Завдання 6 
   |============================
 */
 // Напишіть функцію savePassword(password), яка приймає значення паролю,
@@ -254,11 +254,11 @@ import users from "./users.js";
 // Отримати масив імен користувачів за статтю (поле gender)
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
-function getUsersWithGender(users, userGender) {
-  return users.filter(({ gender }) => gender === userGender).flatMap(({name}) => name);
-}
+// function getUsersWithGender(users, userGender) {
+//   return users.filter(({ gender }) => gender === userGender).flatMap(({name}) => name);
+// }
 
-console.log(getUsersWithGender(users, 'male'));
+// console.log(getUsersWithGender(users, 'male'));
 /**
   |============================
   | Завдання 4
@@ -393,18 +393,14 @@ console.log(getUsersWithGender(users, 'male'));
 // const data = [1, 2, 3, 4, 1, 2];
 // console.log(without(data, 1, 2)); // [3, 4]
 //++++++++++++++++++ Рішення ++++++++++++++++++
-// function without(arr) {
-// for( let i = arr.length - 1; i >= 0; i-=1 ){
-//   arr.splice( arr[i], 1);
+// function without(arr, value) {
+//   return arr.filter(el => el !== value)
 // }
-//   return arr;
-// }
-
 // const data = [1, 2, 3, 4, 1, 2];
 // console.log(without(data, 1, 2));
 /**
   |============================
-  | Завдання 13 --- не вирішено !!!
+  | Завдання 13 не дуже подобається рішення
   |============================
 */
 // Необхідно написати функцію isEqualSymbols(), що приймає в аргументах два рядки
@@ -413,7 +409,16 @@ console.log(getUsersWithGender(users, 'male'));
 // console.log(isEqualSymbols("кіт", "струм")); // результат false
 // console.log(isEqualSymbols("кіт", "тік")); // результат true
 //++++++++++++++++++ Рішення ++++++++++++++++++
+// function isEqualSymbols(str, str2) {
+//   for (const symbol of str) {
+//     const result = str2.includes(symbol);
+//     return result;
+//   }
 
+// }
+// console.log(isEqualSymbols("GOOD", "GODO")); // результат true
+// console.log(isEqualSymbols("кіт", "струм")); // результат false
+// console.log(isEqualSymbols("кіт", "тiк")); // результат true
 /**
   |============================
   | Завдання 14
@@ -507,22 +512,28 @@ console.log(getUsersWithGender(users, 'male'));
 // console.log(allTopics);
 /**
   |============================
-  | Завдання 18
+  | Завдання 18  
   |============================
 */
 // Призначити знижку 20% на фрукти в масиві,
 // Присвоїти ID для кожного продукту
-//++++++++++++++++++ Рішення ++++++++++++++++++
+// ++++++++++++++++++ Рішення ++++++++++++++++++
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+// fruits.forEach(fruit => {
+//   fruit.sale = 20;
+//    fruit.id = generatorId(3);
+//   function generatorId(idx) {
+//     return Math.floor(Math.random() * (100 - 1) + 1);
+//   }
+// });
 
-const discount =
-  
-console.log(discount);
+
+// console.log(fruits);
 /**
   |============================
   | Завдання 19
@@ -530,14 +541,15 @@ console.log(discount);
 */
 // Повернути об'єкт у якому вказується кількість тегів
 //++++++++++++++++++ Рішення ++++++++++++++++++
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
-
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+// const totalTag = tweets.flatMap(tweet => tweet.tags.length);
+// console.log(totalTag);
 /**
   |============================
   | Завдання 20
@@ -545,13 +557,17 @@ const tweets = [
 */
 // Дізнатись суму років практики в об'єкті workers
 //++++++++++++++++++ Рішення ++++++++++++++++++
-const workers = [
-  { id: 10, name: "Mango", years: 14 },
-  { id: 2, name: "Poly", years: 19 },
-  { id: 41, name: "Ajax", years: 30 },
-  { id: 99, name: "Kiwi", years: 22 },
-];
-
+// const workers = [
+//   { id: 10, name: "Mango", years: 14 },
+//   { id: 2, name: "Poly", years: 19 },
+//   { id: 41, name: "Ajax", years: 30 },
+//   { id: 99, name: "Kiwi", years: 22 },
+// ];
+// const totalSum =   workers.flatMap(worker => worker.years)
+//       .reduce((total, worker) => {
+//      return total + worker;
+//       }, 0);
+//    console.log(totalSum);
 /**
   |============================
   | Завдання 21
@@ -561,6 +577,8 @@ const workers = [
 // Потім порахуйте квадратний корінь цих чисел.
 //++++++++++++++++++ Рішення ++++++++++++++++++
 // const array = [121, -2, 225, 0, 4, -5, 36, -11];
+// const result = array.filter(item => item > 0).map(item => Math.sqrt(item));
+// console.log(result);
 
 /**
   |============================
@@ -570,9 +588,10 @@ const workers = [
 // Створення масиву значень Фаренгейта із масиву значень Цельсія
 // Для обрахунку використайте формулу <temperature * 1.8 + 32>
 //++++++++++++++++++ Рішення ++++++++++++++++++
-const celsius = [-15, -5, 0, 10, 16, 20, 24, 32];
+// const celsius = [-15, -5, 0, 10, 16, 20, 24, 32];
 // fahrenheit is [5, 23, 32, 50, 60.8, 68, 75.2, 89.6]
-
+// const result = celsius.map(temperature => temperature * 1.8 + 32);
+// console.log(result);
 /**
   |============================
   | Завдання 23
@@ -580,4 +599,9 @@ const celsius = [-15, -5, 0, 10, 16, 20, 24, 32];
 */
 // Знайти унікальні елементи за допомогою reduce
 //++++++++++++++++++ Рішення ++++++++++++++++++
-const numbers = [1, 9, 0, 1, 5, 9, 1, 6];
+// const numbers = [1, 9, 0, 1, 5, 9, 1, 6];
+// const uniqueArray = numbers.reduce(
+//   (acc, item) => (acc.includes(item) ? acc : [...acc, item]),
+//   []
+// );
+// console.log(uniqueArray);
