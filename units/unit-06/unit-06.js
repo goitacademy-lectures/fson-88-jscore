@@ -2,8 +2,11 @@
 //  Напишіть функцію fn1, яка при натисканні кнопки виводить у .output-1 змінну number1.
 
 const number1 = 15;
+const out_1 = document.querySelector(".output-1");
 
-function fn1() {}
+function fn1() {
+  out_1.innerHTML = number1; 
+}
 
 document.querySelector(".btn-1").onclick = fn1;
 
@@ -12,7 +15,9 @@ document.querySelector(".btn-1").onclick = fn1;
 
 const number2 = 15;
 
-function fn2() {}
+function fn2() {
+  return number2;
+}
 
 document.querySelector(".btn-2").onclick = function () {
   document.querySelector(".output-2").textContent = fn2();
@@ -25,7 +30,9 @@ document.querySelector(".btn-2").onclick = function () {
 // Task 3.
 //  Наша попередня функція, все ще сильно залежна від зовнішніх змінних. Давайте зробимо її універсальнішою. Нехай функція fn3 приймає 2 аргументи та повертає їх добуток. Допишіть код функції так, щоб вона повертала добуток двох чисел, переданих їй як аргументи a, b. Протестуємо функцію на двох прикладах, за допомогою кнопок .btn-3-1 та .btn-3-2.
 
-function fn3() {}
+function fn3(a, b) {
+  return a * b;
+}
 
 document.querySelector(".btn-3-1").onclick = function () {
   const output = document.querySelector(".output-3-1");
@@ -40,7 +47,9 @@ document.querySelector(".btn-3-2").onclick = function () {
 // Task 4
 // Напишіть функцію fn4, яка приймає ваш рік народження і обчислює (повертає) ваш вік. Використайте конструктор new Date() і його метод getFullYear()
 
-function fn4() {}
+function fn4() {
+  
+}
 
 document.querySelector(".btn-4").onclick = function () {
   document.querySelector(".output-4").textContent = fn4(2000); // тут можна вказати свій вік
