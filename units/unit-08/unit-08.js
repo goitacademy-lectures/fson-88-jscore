@@ -137,8 +137,22 @@
   | removeItem(item) - приймає товар і, якщо він є, видаляє його з масиву items
   |============================
 */
+
 // const Storage = function (arr) {
-// };
+//   this.items = arr;
+
+//   this.getItems = function() {
+//     return this.items;
+//   }
+
+//   this.addItem = function (item) {
+//     return this.items.push(item);
+//   }
+
+//   this.removeItem = function (item) {
+//     this.items = this.items.filter((element) => element !== item);
+//   }
+// }
 
 // const storage = new Storage(["🍏", "🍌", "🥭", "🍉"]);
 
@@ -160,19 +174,38 @@
   | доступи до яких зробіть через геттер та сеттер
   |============================
 */
-// class Client {
+class Client {
+  #login;
+  #email;
+  constructor(login, email) {
+    this.#login = login;
+    this.#email = email;
+  }
 
-//   constructor() {
-//   }
+  get login() {
+      return this.#login;
+    }
 
-// }
-// const client = new Client('mango', 'mango@gmail.com');
+  set login(newLogin) {
+      return this.#login = newLogin;
+    }
+
+  get email() {
+      return this.#email;
+    }
+  set email(newEmail) {
+      return this.#email = newEmail;
+    }
+  }
+
+
+const client = new Client('mango', 'mango@gmail.com');
 // console.log(client.getClientData); // {login: 'mango', email: 'mango@gmail.com'}
 
-// client.changeEmail = 'tango@gmail.com';
-// console.log(client.getClientData.email); // 'tango@gmail.com'
+client.changeEmail = 'tango@gmail.com';
+console.log(client.getClientData.email); // 'tango@gmail.com'
 
-// const anotherClient = new Client("poly", "poly@post.ua");
+const anotherClient = new Client("poly", "poly@post.ua");
 // console.log(anotherClient.getClientData);
 /**
   |============================
