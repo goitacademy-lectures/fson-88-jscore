@@ -50,15 +50,15 @@
 //   },
 // };
 
-// const invokeInventoryAction = function (itemName, action) {
+// const invokeInventoryAction = function(itemName, action) {
 //   console.log(`Invoking action on ${itemName}`);
 //   action(itemName);
 // };
 
-// invokeInventoryAction("Compass", inventory.add(inventory));
+// invokeInventoryAction("Compass", inventory.add.bind(inventory));
 // console.log(inventory.items);
 
-// invokeInventoryAction("Flashlight", inventory.remove(inventory));
+// invokeInventoryAction("Flashlight", inventory.remove.bind(inventory));
 // console.log(inventory.items);
 
 /**
@@ -72,12 +72,15 @@
 //   step: 0,
 //   up() {
 //     this.step += 1;
+//     return this;
 //   },
 //   down() {
 //     this.step -= 1;
+//     return this;
 //   },
 //   showStep() {
 //     console.log(this.step);
+//     return this;
 //   },
 // };
 
@@ -95,16 +98,16 @@
   | який виводить в консоль значення полів login і email об'єкта який його викликав.
   |============================
 */
-// class Account {
-//   constructor(login, email) {
-//     this.login = login;
-//     this.email = email;
-//   }
+// function Account(login, email) {
 
-//   getInfo () {
-//     return `login: ${this.login}, email: ${this.email}`
-//   }
+//   this.login = login;
+//   this.email = email;
 // }
+
+// Account.prototype.getInfo = function() {
+//   return `login: ${this.login}, email: ${this.email}`
+// };
+
 // //==============================================================================
 // console.log(Account.prototype.getInfo); // function
 
