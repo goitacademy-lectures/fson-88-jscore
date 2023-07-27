@@ -4,7 +4,17 @@
 
 // де символи * малюються за допомогою внутрішнього циклу від 0 до 3, а символ _ за допомогою зовнішнього циклу
 
-function fn1() {}
+function fn1() {
+    const element = document.querySelector(".output-1")
+    let string = "";
+    for (let i = 0; i < 3; i += 1) {
+        for (let k = 0; k < 3; k += 1) {
+            string += "*";
+        }
+        string += "_";
+    }
+    element.innerHTML = string;
+}
 
 document.querySelector(".btn-1").onclick = fn1;
 
@@ -19,7 +29,7 @@ document.querySelector(".btn-1").onclick = fn1;
 
 // Розв'язати задачу за допомогою вкладених циклів. Зовнішній цикл виводить цифру та знак переносу рядка <br>, внутрішній – *_, і після цього зовнішній – знак переносу <br>.
 
-function fn2() {}
+function fn2() { }
 
 document.querySelector(".btn-2").onclick = fn2;
 
@@ -32,7 +42,7 @@ document.querySelector(".btn-2").onclick = fn2;
 
 // Розв'язати задачу за допомогою вкладених циклів. Внутрішній цикл виводить *_, зовнішній цикл виводить знак переносу <br>.
 
-function fn3() {}
+function fn3() { }
 
 document.querySelector(".btn-3").onclick = fn3;
 
@@ -41,7 +51,7 @@ document.querySelector(".btn-3").onclick = fn3;
 // 1_1*2*3*4*5*2_1*2*3*4*5*3_1*2*3*4*5*
 
 //  Зовнішній цикл виводить цифру та _, а внутрішній виводить від 1 до 5 із *
-function fn4() {}
+function fn4() { }
 
 document.querySelector(".btn-4").onclick = fn4;
 
@@ -52,7 +62,7 @@ document.querySelector(".btn-4").onclick = fn4;
 // 101010
 
 //  Вкладений цикл залежно від парного чи ні k лічильника циклу малює 0 або 1. Зовнішній цикл - <br>.
-function fn5() {}
+function fn5() { }
 
 document.querySelector(".btn-5").onclick = fn5;
 
@@ -62,7 +72,7 @@ document.querySelector(".btn-5").onclick = fn5;
 // 10x01x
 // 10x01x
 
-function fn6() {}
+function fn6() { }
 
 document.querySelector(".btn-6").onclick = fn6;
 
@@ -73,7 +83,7 @@ document.querySelector(".btn-6").onclick = fn6;
 // ***
 // ****
 
-function fn7() {}
+function fn7() { }
 
 document.querySelector(".btn-7").onclick = fn7;
 
@@ -85,7 +95,7 @@ document.querySelector(".btn-7").onclick = fn7;
 // **
 // *
 
-function fn8() {}
+function fn8() { }
 
 document.querySelector(".btn-8").onclick = fn8;
 
@@ -97,7 +107,7 @@ document.querySelector(".btn-8").onclick = fn8;
 // 1_2_3_4_
 // 1_2_3_4_5_
 
-function fn9() {}
+function fn9() { }
 
 document.querySelector(".btn-9").onclick = fn9;
 
@@ -109,6 +119,6 @@ document.querySelector(".btn-9").onclick = fn9;
 //31_32_33_34_35_36_37_38_39_40_
 //41_42_43_44_45_46_47_48_49_50_
 
-function fn10() {}
+function fn10() { }
 
 document.querySelector(".btn-10").onclick = fn10;
