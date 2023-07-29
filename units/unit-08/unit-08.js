@@ -174,38 +174,37 @@
   | доступи до яких зробіть через геттер та сеттер
   |============================
 */
-class Client {
-  #login;
-  #email;
-  constructor(login, email) {
-    this.#login = login;
-    this.#email = email;
-  }
+// class Client {
+//   #login;
+//   #email;
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
 
-  get login() {
-      return this.#login;
-    }
+//   get getClientData() {
+//     return {
+//       login: this.#login,
+//       email: this.#email
+//     }
+//   }
 
-  set login(newLogin) {
-      return this.#login = newLogin;
-    }
+//   set login(newLogin) {
+//       return this.#login = newLogin;
+//     }
+  
+//   set changeEmail(newEmail) {
+//       return this.#email = newEmail;
+//     }
+//   }
 
-  get email() {
-      return this.#email;
-    }
-  set email(newEmail) {
-      return this.#email = newEmail;
-    }
-  }
-
-
-const client = new Client('mango', 'mango@gmail.com');
+// const client = new Client('mango', 'mango@gmail.com');
 // console.log(client.getClientData); // {login: 'mango', email: 'mango@gmail.com'}
 
-client.changeEmail = 'tango@gmail.com';
-console.log(client.getClientData.email); // 'tango@gmail.com'
+// client.changeEmail = 'tango@gmail.com';
+// console.log(client.getClientData.email); // 'tango@gmail.com'
 
-const anotherClient = new Client("poly", "poly@post.ua");
+// const anotherClient = new Client("poly", "poly@post.ua");
 // console.log(anotherClient.getClientData);
 /**
   |============================
@@ -220,40 +219,54 @@ const anotherClient = new Client("poly", "poly@post.ua");
   |============================
 */
 
-// class Notes {
-//   static Priority() {
-//   }
-//   constructor() {
-//   }
+class Notes {
+  static Priority() {
+    return {
+      HIGHT: "hight",
+      LOW: "low",
+    };
+  }
 
-//   addNote() {
-//   }
+  constructor() {
+    this.items = [];
+  }
 
-//   removeNote() {
+  addNote(note) {
+    return this.items.push(note);
+  }
 
-//   }
+  removeNote(noteName) {
+    const index = this.items.findIndex((item) => item.text === noteName);
+    if (index !== -1) {
+      this.items.splice(index, 1);
+    }
+  }
 
-//   updatePriority() {
-//   }
-// }
+  updatePriority({ text, newPriority }) {
+    const index = this.items.findIndex((item) => item.text === text);
+    if (index !== -1) {
+      this.items[index].priority = newPriority;
+    }
+  }
+}
 
-// const firstNote = new Notes();
+const firstNote = new Notes();
 
-// firstNote.addNote({ text: "Купити фрукти", priority: Notes.Priority().LOW });
-// firstNote.addNote({
-//   text: "Прибрати в кімнаті",
-//   priority: Notes.Priority().LOW,
-// });
-// console.log(firstNote.items); // [{text: 'Купити фрукти', priority: 'low'}, {text: 'Прибрати в кімнаті', priority: 'low'}]
+firstNote.addNote({ text: "Купити фрукти", priority: Notes.Priority().LOW });
+firstNote.addNote({
+  text: "Прибрати в кімнаті",
+  priority: Notes.Priority().LOW,
+});
+console.log(firstNote.items); // [{text: 'Купити фрукти', priority: 'low'}, {text: 'Прибрати в кімнаті', priority: 'low'}]
 
-// firstNote.updatePriority({
-//   text: "Купити фрукти",
-//   newPriority: Notes.Priority().HIGHT,
-// });
-// console.log(firstNote.items); // [{text: 'Купити фрукти', priority: 'hight'}, {text: 'Прибрати в кімнаті', priority: 'low'}]
+firstNote.updatePriority({
+  text: "Купити фрукти",
+  newPriority: Notes.Priority().HIGHT,
+});
+console.log(firstNote.items); // [{text: 'Купити фрукти', priority: 'hight'}, {text: 'Прибрати в кімнаті', priority: 'low'}]
 
-// firstNote.removeNote("Прибрати в кімнаті");
-// console.log(firstNote.items); //[{text: 'Купити фрукти', priority: 'hight'}]
+firstNote.removeNote("Прибрати в кімнаті");
+console.log(firstNote.items); //[{text: 'Купити фрукти', priority: 'hight'}]
 
 /**
   |============================
