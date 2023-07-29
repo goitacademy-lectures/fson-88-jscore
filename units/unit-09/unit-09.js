@@ -5,6 +5,14 @@
 з поля введення (дивіться на елементи в html-розмітці)
 */
 
+// function showMe(evt) {
+//     // console.log(evt.currentTarget);
+//     // console.log(evt.target);
+// console.log(inputEl.value);
+// }
+
+// btnEl.addEventListener("click", showMe)
+
 //TODO:==============================================
 /*
 Завдання 2
@@ -19,13 +27,62 @@
 "Show", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
+const elements_3 = {
+    btn: document.querySelector("#passwordButton"),
+    input: document.querySelector("#passwordInput"),
+};
+function handlerToggle(evt) {
+    const btnText = evt.currentTarget.textContent;
+
+    if (btnText === "Hide") {
+        evt.currentTarget.textContent = "Show";
+        elements_3.input.setAttribute("type", "password");
+    } else {
+        evt.currentTarget.textContent = "Hide";
+        elements_3.input.setAttribute("type", "text");
+    }
+    // Variant 2
+    //   const isHide = evt.currentTarget.textContent;
+    //   evt.currentTarget.textContent = isHide === "Hide" ? "Show" : "Hide";
+}
+
+elements_3.btn.addEventListener("click", handlerToggle);
 
 //TODO:==============================================
 /*
 Завдання 4
 Кнопка "Decrease" робить квадрат менше на 10 пікселів, кнопка "Increase" - більше на 10 пікселів. Використай інструкцію switch
 */
+const elements_4 = {
+    btnDecrease: document.querySelector("#decrease"),
+    btnIncrease: document.querySelector("#increase"),
+};
 
+const squareEl = document.createElement("div");
+squareEl.setAttribute("id", "box");
+squareEl.style.width = squareEl.style.height = "100px";
+squareEl.style.background = "orange";
+elements_4.btnIncrease.after(squareEl);
+
+elements_4.btnDecrease.addEventListener("click", handlerSquareSize);
+elements_4.btnIncrease.addEventListener("click", handlerSquareSize);
+
+function handlerSquareSize(evt) {
+    const idValue = evt.currentTarget.id;
+
+    console.log(evt.currentTarget.dataset.action);
+
+    switch (idValue) {
+        case "increase":
+            squareEl.style.width = squareEl.clientWidth + 10 + "px";
+            squareEl.style.height = squareEl.clientHeight + 10 + "px";
+            break;
+        case "decrease":
+            squareEl.style.width = squareEl.clientWidth - 10 + "px";
+            squareEl.style.height = squareEl.clientHeight - 10 + "px";
+            break;
+    }
+}
 //TODO:==============================================
 /*
 Завдання 5
