@@ -4,14 +4,38 @@
 При натисканні на кнопку "Show me" в консоль має виводити значення
 з поля введення (дивіться на елементи в html-розмітці)
 */
+// const elms = {
+//     btn: document.querySelector('#alertButton'),
+//     input: document.querySelector('#alertInput')
+// }
 
+// function handlerShowMe() {
+//     console.log(elms.input.value);
+// }
+
+// elms.btn.addEventListener('click', handlerShowMe);
 //TODO:==============================================
 /*
 Завдання 2
 Після натискання кнопки "Swap me" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
+// const elms_2 = {
+//     leftSwapInput: document.querySelector("#leftSwapInput"),
+//     rightSwapInput: document.querySelector('#rightSwapInput'),
+//     swapButton: document.querySelector('#swapButton')
+// }
 
+// function handlerSwap() {
+//     let valueTemp = leftSwapInput.value  --- створити переменну !!!
+//     const leftSwapInputValue = leftSwapInput.value;
+    
+//     const rightSwapInputValue = valueTemp;
+//     console.log(rightSwapInput.value);
+    
+// }
+
+// elms_2.swapButton.addEventListener('click', handlerSwap)
 //TODO:==============================================
 /*
 Завдання 3
@@ -19,13 +43,59 @@
 "Show", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
+// const elms_3 = {
+//     passwordInput: document.querySelector('#passwordInput'),
+//     passwordButton: document.querySelector('#passwordButton')
+// }
+// function handlerChangePassword(evt) {
+//     const btnText = evt.currentTarget.textContent;
+    
+//     if (btnText === 'Hide') {
+//         evt.currentTarget.textContent = 'Show';
+//         elms_3.passwordInput.setAttribute('type', 'password');
+//     } else {
+//         evt.currentTarget.textContent = 'Hide';
+//         elms_3.passwordInput.setAttribute('type', 'text');
+//     }
 
+//     // const isHide = evt.currentTarget.textContent;
+//     // evt.currentTarget.textContent = isHide === 'Hide' ? 'Show' : 'Hide';
+// }
+// elms_3.passwordButton.addEventListener('click', handlerChangePassword)
 //TODO:==============================================
 /*
 Завдання 4
 Кнопка "Decrease" робить квадрат менше на 10 пікселів, кнопка "Increase" - більше на 10 пікселів. Використай інструкцію switch
 */
+const elms_4 = {
+    btnDecrease: document.querySelector('#decrease'),
+    btnIncrease: document.querySelector('#increase')
+}
 
+const squareEl = document.createElement('div');
+squareEl.setAttribute('id', 'box');
+squareEl.style.width = squareEl.style.height = '100px';
+squareEl.style.backgroundColor = 'teal';
+
+elms_4.btnIncrease.after(squareEl);
+
+elms_4.btnIncrease.addEventListener('click', handlerSquareSize);
+elms_4.btnDecrease.addEventListener('click', handlerSquareSize);
+
+function handlerSquareSize(evt) {
+    const idValue = evt.currentTarget.id;
+    console.log(idValue);
+    switch (idValue) {
+        case 'increase':
+            squareEl.style.width = squareEl.clientWidth + 10 + 'px';
+            squareEl.style.height = squareEl.clientHeight + 10 + 'px';
+            break;
+    case 'decrease':
+            squareEl.style.width = squareEl.clientWidth - 10 + 'px';
+            squareEl.style.height = squareEl.clientHeight - 10 + 'px';
+            break;
+    }
+}
 //TODO:==============================================
 /*
 Завдання 5
