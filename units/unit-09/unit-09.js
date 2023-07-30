@@ -109,6 +109,21 @@ function handlerSquareSize(evt) {
 https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 */
 
+const placeElement = document.querySelector("#place");
+placeElement.classList.add("placeDiv");
+placeElement.style.width = "150px";
+placeElement.style.height = "150px";
+placeElement.style.backgroundColor = "tomato";
+
+function handlerClickTarget(evt) {
+  if (placeElement.contains(evt.target)) {
+    console.log('Клік відбувся всередині елемента з id "place".');
+  } else {
+    console.log('Клік відбувся поза зоною елемента з id "place".');
+  }
+}
+document.addEventListener("click", handlerClickTarget);
+
 //TODO:==============================================
 /*
 Завдання 6
@@ -116,7 +131,22 @@ https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 у кожному елементі списку у 2 рази
 */
 
-//TODO:==============================================
+const sixTask = {
+  list: document.querySelector(".list"),
+  listItems: document.querySelectorAll(".listItem"),
+  btn: document.querySelector("#double"),
+};
+
+function handlerDoubleSize() {
+  sixTask.listItems.forEach((item) => {
+    const computedStyle = window.getComputedStyle(item);
+    const currentFontSize = parseFloat(computedStyle.fontSize);
+    const newFontSize = currentFontSize * 2;
+    item.style.fontSize = newFontSize + "px";
+  });
+}
+
+sixTask.btn.addEventListener("click", handlerDoubleSize);
 /*
 Завдання 7
 При кліку на коло воно повинно слідувати за курсором.
