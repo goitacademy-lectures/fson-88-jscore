@@ -109,20 +109,20 @@ function handlerSquareSize(evt) {
 https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 */
 
-const placeElement = document.querySelector("#place");
-placeElement.classList.add("placeDiv");
-placeElement.style.width = "150px";
-placeElement.style.height = "150px";
-placeElement.style.backgroundColor = "tomato";
+// const placeElement = document.querySelector("#place");
+// placeElement.classList.add("placeDiv");
+// placeElement.style.width = "150px";
+// placeElement.style.height = "150px";
+// placeElement.style.backgroundColor = "tomato";
 
-function handlerClickTarget(evt) {
-  if (placeElement.contains(evt.target)) {
-    console.log('Клік відбувся всередині елемента з id "place".');
-  } else {
-    console.log('Клік відбувся поза зоною елемента з id "place".');
-  }
-}
-document.addEventListener("click", handlerClickTarget);
+// function handlerClickTarget(evt) {
+//   if (placeElement.contains(evt.target)) {
+//     console.log('Клік відбувся всередині елемента з id "place".');
+//   } else {
+//     console.log('Клік відбувся поза зоною елемента з id "place".');
+//   }
+// }
+// document.addEventListener("click", handlerClickTarget);
 
 //TODO:==============================================
 /*
