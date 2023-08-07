@@ -4,14 +4,33 @@
 При натисканні на кнопку "Show me" в консоль має виводити значення
 з поля введення (дивіться на елементи в html-розмітці)
 */
-
+const elemt = {
+    btn: document.querySelector("#alertButton"),
+    input: document.querySelector("#alertInput"),
+  };
+  function handlerBtnClick(evt) {
+    console.log(elemt.input.value);
+  }
+  elemt.btn.addEventListener("click", handlerBtnClick);
 //TODO:==============================================
 /*
 Завдання 2
 Після натискання кнопки "Swap me" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
-
+const elemt_2 = {
+    btn: document.querySelector("#swapButton"),
+    inputLeft: document.querySelector("#leftSwapInput"),
+    inputRight: document.querySelector("#rightSwapInput"),
+  };
+  
+  function handlerChangeValue(evt) {
+    const tempValue = elemt_2.inputLeft.value;
+    elemt_2.inputLeft.value = elemt_2.inputRight.value;
+    elemt_2.inputRight.value = tempValue;
+  }
+  
+  elemt_2.btn.addEventListener("click", handlerChangeValue);
 //TODO:==============================================
 /*
 Завдання 3
@@ -19,12 +38,55 @@
 "Show", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
-
+const elements_3 = {
+    btn: document.querySelector("#passwordButton"),
+    input: document.querySelector("#passwordInput"),
+  };
+  function handlerToggle(evt) {
+    const btnText = evt.currentTarget.textContent;
+  
+    if (btnText === "Hide") {
+      evt.currentTarget.textContent = "Show";
+      elements_3.input.setAttribute("type", "password");
+    } else {
+      evt.currentTarget.textContent = "Hide";
+      elements_3.input.setAttribute("type", "text");
+    }}
 //TODO:==============================================
 /*
 Завдання 4
 Кнопка "Decrease" робить квадрат менше на 10 пікселів, кнопка "Increase" - більше на 10 пікселів. Використай інструкцію switch
 */
+const elements_4 = {
+    btnDecrease: document.querySelector("#decrease"),
+    btnIncrease: document.querySelector("#increase"),
+  };
+  
+  const squareEl = document.createElement("div");
+  squareEl.setAttribute("id", "box");
+  squareEl.style.width = squareEl.style.height = "100px";
+  squareEl.style.background = "orange";
+  elements_4.btnIncrease.after(squareEl);
+  
+  elements_4.btnDecrease.addEventListener("click", handlerSquareSize);
+  elements_4.btnIncrease.addEventListener("click", handlerSquareSize);
+  
+  function handlerSquareSize(evt) {
+    const idValue = evt.currentTarget.id;
+  
+    console.log(evt.currentTarget.dataset.action);
+  
+    switch (idValue) {
+      case "increase":
+        squareEl.style.width = squareEl.clientWidth + 10 + "px";
+        squareEl.style.height = squareEl.clientHeight + 10 + "px";
+        break;
+      case "decrease":
+        squareEl.style.width = squareEl.clientWidth - 10 + "px";
+        squareEl.style.height = squareEl.clientHeight - 10 + "px";
+        break;
+    }
+  }
 
 //TODO:==============================================
 /*
@@ -37,12 +99,38 @@
 https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 */
 
+// to skip
+
+
 //TODO:==============================================
 /*
 Завдання 6
 Натиснувши кнопку "Double", збільшити значення
 у кожному елементі списку у 2 рази
 */
+
+const doubleBtn = document.querySelector('#double')
+const listItems = document.querySelectorAll('.listItem')
+
+// function doubleListItem () {
+//   listItem.forEach((item) => {
+//     const double = parseInt(item.textContent);
+//     item.textContent = double * 2;
+//   });
+//   };
+
+//   doubleBtn.addEventListener('click', doubleListItem);
+
+// ============  2 var  ================================
+doubleBtn.addEventListener('click', function () {
+
+listItems.forEach ((item) => {
+  const value = Number(item.textContent);
+  item.textContent = (value * 2).toString();
+});
+});
+
+
 
 //TODO:==============================================
 /*
@@ -113,10 +201,9 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 */
 
 //TODO:==============================================
-/*
-Завдання 16
- Створіть HTML сторінку з формою,
- яка містить поле введення для введення
- імені користувача та кнопку. При натисканні
- на кнопку відобразіть повідомлення з привітанням з іменем користувача.
-*/
+
+// Завдання 16
+//  Створіть HTML сторінку з формою,
+//  яка містить поле введення для введення
+//  імені користувача та кнопку. При натисканні
+//  на кнопку відобразіть повідомлення з привітанням з іменем користувача.
