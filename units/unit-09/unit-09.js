@@ -99,9 +99,17 @@ const elements_4 = {
 https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 */
 
-// to skip
+// to skip, вже не скіп, а виконуй)))!!!
+const place = document.querySelector('#place');
 
+function handleClick (evt) {
+if (place.contains(evt.target)) {
+console.log('Клік відбувся всередині елемента з id "place".');
+} else {
+  console.log("Клік відбувся поза зоною елемента js.");}
+}
 
+document.addEventListener('click',handleClick);
 //TODO:==============================================
 /*
 Завдання 6
@@ -142,6 +150,8 @@ https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
 https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 */
 
+
+
 //TODO:==============================================
 /*
 Завдання 8
@@ -149,6 +159,36 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 За натисканням на кнопку "Show result" виводиться сума значення, а також статистика з
 інформацією про те, яка кнопка була натиснута скільки разів.
 */
+
+const calcButtons = document.querySelectorAll('.calcButton');
+const resultButton = document.querySelector('#resultButton');
+const resultSection = document.querySelector('#resultSection');
+
+const buttonClicks = {};
+
+calcButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const buttonNumber = button.getAttribute('data-number');
+    if (buttonNumber in buttonClicks) {
+      buttonClicks[buttonNumber]++;
+    } else {
+      buttonClicks[buttonNumber] = 1;
+    }
+  });
+});
+
+resultButton.addEventListener('click', () => {
+  let sum = 0;
+  let stats = '';
+  
+  for (const number in buttonClicks) {
+    sum += parseInt(number) * buttonClicks[number];
+    stats += `Button ${number} was clicked ${buttonClicks[number]} times.<br>`;
+  }
+
+  resultSection.innerHTML = `Total sum: ${sum}${stats}`;
+});
+
 
 //TODO:==============================================
 /*
