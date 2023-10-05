@@ -4,7 +4,18 @@
 
 // де символи * малюються за допомогою внутрішнього циклу від 0 до 3, а символ _ за допомогою зовнішнього циклу
 
-function fn1() {}
+function fn1() {
+  let output = "";
+  let counter = 0;
+  while (counter < 3) {
+    for (let i = 0; i < 3; i++) {
+      output += "*";
+    }
+    counter += 1;
+    output += "-";
+  }
+  document.querySelector(".output-1").innerHTML = output;
+}
 
 document.querySelector(".btn-1").onclick = fn1;
 
@@ -19,7 +30,17 @@ document.querySelector(".btn-1").onclick = fn1;
 
 // Розв'язати задачу за допомогою вкладених циклів. Зовнішній цикл виводить цифру та знак переносу рядка <br>, внутрішній – *_, і після цього зовнішній – знак переносу <br>.
 
-function fn2() {}
+function fn2() {
+  let output = "";
+  for (let i = 1; i <= 3; i += 1) {
+    output += i + `<br>`;
+    for (let j = 0; j < 3; j += 1) {
+      output += "*_";
+    }
+    output += `<br>`;
+  }
+  document.querySelector(".output-2").innerHTML = output;
+}
 
 document.querySelector(".btn-2").onclick = fn2;
 
@@ -32,7 +53,16 @@ document.querySelector(".btn-2").onclick = fn2;
 
 // Розв'язати задачу за допомогою вкладених циклів. Внутрішній цикл виводить *_, зовнішній цикл виводить знак переносу <br>.
 
-function fn3() {}
+function fn3() {
+  let output = "";
+  for (let i = 0; i < 4; i += 1) {
+    for (let j = 0; j < 4; j += 1) {
+      output += "*_";
+    }
+    output += `<br>`;
+  }
+  document.querySelector(".output-3").innerHTML = output;
+}
 
 document.querySelector(".btn-3").onclick = fn3;
 
@@ -41,8 +71,17 @@ document.querySelector(".btn-3").onclick = fn3;
 // 1_1*2*3*4*5*2_1*2*3*4*5*3_1*2*3*4*5*
 
 //  Зовнішній цикл виводить цифру та _, а внутрішній виводить від 1 до 5 із *
-function fn4() {}
 
+function fn4() {
+  let output = "";
+  for (let i = 1; i < 4; i += 1) {
+    output += i + "_";
+    for (let j = 1; j < 6; j += 1) {
+      output += j + "*";
+    }
+  }
+  document.querySelector(".output-4").innerHTML = output;
+}
 document.querySelector(".btn-4").onclick = fn4;
 
 // Task 5
@@ -52,7 +91,20 @@ document.querySelector(".btn-4").onclick = fn4;
 // 101010
 
 //  Вкладений цикл залежно від парного чи ні k лічильника циклу малює 0 або 1. Зовнішній цикл - <br>.
-function fn5() {}
+function fn5() {
+  let output = "";
+  for (let i = 0; i < 3; i += 1) {
+    for (let j = 1; j <= 6; j += 1) {
+      if (j % 2 === 0) {
+        output += "0";
+      } else {
+        output += "1";
+      }
+    }
+    output += `<br>`;
+  }
+  document.querySelector(".output-5").innerHTML = output;
+}
 
 document.querySelector(".btn-5").onclick = fn5;
 
@@ -62,7 +114,18 @@ document.querySelector(".btn-5").onclick = fn5;
 // 10x01x
 // 10x01x
 
-function fn6() {}
+function fn6() {
+  let output = "";
+  for (let i = 0; i < 3; i += 1) {
+    for (let j = 1; j <= 6; j++) {
+      if (j === 1 || j === 5) output += "1";
+      if (j === 2 || j === 4) output += "0";
+      if (j === 3 || j === 6) output += "x";
+    }
+    output += `<br>`;
+  }
+  document.querySelector(".output-6").innerHTML = output;
+}
 
 document.querySelector(".btn-6").onclick = fn6;
 
@@ -73,7 +136,16 @@ document.querySelector(".btn-6").onclick = fn6;
 // ***
 // ****
 
-function fn7() {}
+function fn7() {
+  let output = "";
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j <= i; j++) {
+      output += "*";
+    }
+    output += `<br>`;
+  }
+  document.querySelector(".output-7").innerHTML = output;
+}
 
 document.querySelector(".btn-7").onclick = fn7;
 
@@ -85,8 +157,16 @@ document.querySelector(".btn-7").onclick = fn7;
 // **
 // *
 
-function fn8() {}
-
+function fn8() {
+  let string = "";
+  for (let i = 0; i < 5; i += 1) {
+    for (let k = 5; k > i; k -= 1) {
+      string += "*";
+    }
+    string += "<br>";
+  }
+  document.querySelector(".output-8").innerHTML = string;
+}
 document.querySelector(".btn-8").onclick = fn8;
 
 // Task 9
@@ -97,7 +177,16 @@ document.querySelector(".btn-8").onclick = fn8;
 // 1_2_3_4_
 // 1_2_3_4_5_
 
-function fn9() {}
+function fn9() {
+  let string = "";
+  for (let i = 1; i <= 5; i++) {
+    for (let k = 1; k <= i; k++) {
+      string += k + "_";
+    }
+    string += "<br>";
+  }
+  document.querySelector(".output-9").innerHTML = string;
+}
 
 document.querySelector(".btn-9").onclick = fn9;
 
@@ -109,6 +198,15 @@ document.querySelector(".btn-9").onclick = fn9;
 //31_32_33_34_35_36_37_38_39_40_
 //41_42_43_44_45_46_47_48_49_50_
 
-function fn10() {}
+function fn10() {
+  let string = "";
+  for (let i = 0; i < 5; i++) {
+    for (let k = 1; k <= 10; k++) {
+      string += `${i * 10 + k}_`.padStart(3, 0);
+    }
+    string += "<br>";
+  }
+  document.querySelector(".output-10").innerHTML = string;
+}
 
 document.querySelector(".btn-10").onclick = fn10;
