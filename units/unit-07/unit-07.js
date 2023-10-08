@@ -12,6 +12,22 @@
 // виведіть в консоль повідомлення "Ви не ввели імʼя"
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function letMeSeeYourName(callback) {
+//   let name = prompt();
+
+//   callback(name);
+// }
+// const greet = function (name) {
+//   // if (name === "") {
+//   //   console.log("Ви не ввели імʼя");
+//   //   return;
+//   // }
+//   // console.log(`Привіт ${name}`);
+//   name === "" ? console.log("Ви не ввели імʼя") : console.log(`Привіт ${name}`);
+// };
+
+// letMeSeeYourName(greet);
+
 /**
   |============================
   | Завдання 2
@@ -27,6 +43,17 @@
 // продукту і виводить інформацію у консоль
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function makeProduct(name, price, callback) {
+//   const product = {
+//     name,
+//     price,
+//     id: new Date().getTime(),
+//   };
+//   callback(product);
+// }
+// function showProduct(product) {
+//   console.log(product);
+// }
 // makeProduct("Fish", 350, showProduct);
 
 /**
@@ -39,12 +66,18 @@
 // Напишіть функцію makeShef(shefName), яка повертає функцію
 // makeDish(dish), що пам'ятає ім'я шефа під час її виклику
 //++++++++++++++++++ Рішення ++++++++++++++++++
-// const makeDish = function (shefName, dish) {
-// console.log(`${shefName} is cooking ${dish}`);
-// };
 
-// makeDish("Mango", "apple pie");
-// makeDish("Poly", "muffins");
+// const makeShef = function (name) {
+//   //
+//   return function makeDish(dish) {
+//     console.log(`${name} is cooking ${dish}`);
+//   };
+// };
+// const mango = makeShef("Mango");
+// mango("apple pie");
+
+// const poly = makeShef("POly");
+// poly("potatoes");
 
 /**
   |============================
@@ -61,16 +94,28 @@
 //  - за допомогою function declaration
 //  - за допомогою arrow function
 //++++++++++++++++++ Рішення function declaration ++++++++++++++++++
-// function each(array, callback) {}
+
+// function each(array, callback) {
+//   let newArr = [];
+
+//   for (const value of array) {
+//     let result = callback(value);
+//     newArr.push(result);
+//   }
+//   return newArr;
+// }
 
 // function multiply(value) {
-//   return;
+//   const newValue = value * 2;
+//   return newValue;
 // }
-// const array = [3, 5, 6, 34, 8, 83, 12, 34];
+// const arr = [3, 5, 6, 34, 8, 83, 12, 34];
 
-// console.log(each(array, multiply));
+// console.log(each(arr, multiply));
+
 //++++++++++++++++++ Рішення arrow function ++++++++++++++++++
-
+// const arr = [3, 5, 6, 34, 8, 83, 12, 34];
+// console.log(arr.map((value) => value * 2));
 /**
   |============================
   | Завдання 5
@@ -83,7 +128,28 @@
 //  - за допомогою arrow function
 //++++++++++++++++++ Рішення function declaration ++++++++++++++++++
 
+// function makeCounter(callback) {
+//   console.log(countCalls());
+// }
+// let counter = 0;
+// function countCalls() {
+//   return (counter += 1);
+// }
+
+// makeCounter(countCalls);
+// makeCounter(countCalls);
+// makeCounter(countCalls);
+// makeCounter(countCalls);
 //++++++++++++++++++ Рішення arrow function ++++++++++++++++++
+// let counter = 0;
+// function makeCounter() {
+//   const countCalls = () => (counter += 1);
+//   console.log(countCalls());
+// }
+
+// makeCounter();
+// makeCounter();
+// makeCounter();
 
 /**
   |============================
@@ -322,7 +388,16 @@ const courses = [
   },
   {
     name: "Intermediate JavaScript",
-    topics: ["VSCode", "NPM", "Bundlers", "Transpiling", "Git", "Promises", "AJAX", "GitHub"],
+    topics: [
+      "VSCode",
+      "NPM",
+      "Bundlers",
+      "Transpiling",
+      "Git",
+      "Promises",
+      "AJAX",
+      "GitHub",
+    ],
   },
 ];
 
